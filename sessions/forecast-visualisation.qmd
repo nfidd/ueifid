@@ -28,7 +28,7 @@ The source file of this session is located at `sessions/forecasting-concepts.qmd
 
 ## Libraries used
 
-In this session we will use the `nfidd` package to load a data set of infection times, the `dplyr` package for data wrangling, and the `ggplot2` library for plotting.
+In this session we will use the `nfidd` package to load a data set of infection times and corresponding forecasts, the `dplyr` package for data wrangling, and the `ggplot2` library for plotting.
 
 ```{r libraries, message = FALSE}
 library("nfidd")
