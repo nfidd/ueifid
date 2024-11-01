@@ -1,0 +1,64 @@
+# Workflow derived from https://github.com/r-lib/actions/tree/master/examples
+# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 1 * *'  # Run at 00:00 on the 1st of every month
+  push:
+    branches: [main]
+  pull_request:
+  merge_group:
+
+name: deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      LANG: "en_US.UTF-8"
+      LC_ALL: "en_US.UTF-8"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+          extra-repositories: 'https://stan-dev.r-universe.dev'
+
+      - name: Install dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages:
+            any::gh,
+            any::knitr,
+            any::rmarkdown,
+            local::.,
+
+      - name: Install cmdstan
+        uses: epinowcast/actions/install-cmdstan@v1
+        with:
+          cmdstan-version: 'latest'
+          num-cores: 2
+
+      - name: Render site
+        run: quarto render
+
+      - name: Upload website
+        uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request'
+        with:
+          name: site
+          retention-days: 5
+          path: _site
+
+      - name: Deploy to GitHub pages 🚀
+        if: github.ref_name == 'main'
+        uses: JamesIves/github-pages-deploy-action@v4.6.8
+        with:
+          branch: gh-pages
+          folder: _site
+          single-commit: true
+          clean: true

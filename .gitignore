@@ -1,0 +1,16 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+_site
+.DS_Store
+*_files/
+/.quarto/
+inst/stan/simple-nowcast
+inst/stan/*
+!inst/stan/functions
+!inst/stan/*.stan
+*.html
+*.rmarkdown
+.vscode/
+*pdf

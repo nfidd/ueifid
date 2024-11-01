@@ -1,0 +1,40 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+
+website:
+  title: "NFIDD"
+  site-url: https://nfidd.github.io/nfidd/
+  description: "Nowcasting and forecasting infectious disease dynamics"
+  body-footer: '<script data-goatcounter="https://nfidd.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
+  open-graph: true
+  navbar:
+    left:
+      - sidebar:sessions
+      - text: "Learning objectives"
+        href: learning_objectives.qmd
+      - text: "Getting set up for the course"
+        href: getting-set-up.qmd
+      - text: "Getting help"
+        href: help.qmd
+      - text: "Timetable"
+        href: sessions.qmd
+    right:
+      - icon: github
+        href: https://github.com/nfidd/nfidd
+  sidebar:
+    - id: sessions
+      title: "Sessions"
+      style: "docked"
+      contents: "sessions/*.qmd"
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: solar
+    css: styles.css
+    link-external-icon: true
+    link-external-newwindow: true
+    toc: true

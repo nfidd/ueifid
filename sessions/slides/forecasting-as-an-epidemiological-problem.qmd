@@ -1,0 +1,93 @@
+---
+title: "Forecasting as an epidemiological problem"
+author: "Nowcasting and forecasting of infectious disease dynamics"
+engine: knitr
+format:
+  revealjs:
+    output: slides/forecasting-as-an-epidemiological-problem.html
+    footer: "Forecasting as an epidemiological problem"
+    slide-level: 3
+---
+
+### Forecasting in infectious disease epidemiology
+
+![](figures/metcalf_lessler_fraught.png){width=50%}
+
+[Metcalf & Lessler, *Science*, 2017](https://doi.org/10.1126/science.aam8335)
+
+### Using models for statements about the future {.smaller}
+
+Modelling the future can help decision making:
+
+- how many beds to we need?
+- where should we allocate vaccines?
+- where should we trial vaccines?
+
+However:
+
+- not all modelling is prediction
+- not all modelling of the future is forecasting
+
+### Different ways of modelling the future {.smaller}
+
+- **Nowcasts** make statements about current trends based on partial data
+
+- **Forecasts** are *unconditional* statements about the future: what *will happen*
+
+- **Scenarios** state what *would* happen under certain conditions
+
+### Why nowcast/forecast? {.smaller}
+
+- to create **situational awareness**
+  - nowcast: where are we now?
+  - forecast: where are we heading?
+
+### CDC use of influenza forecasts
+
+![](figures/cdc_flu_forecast_use.png)
+
+[CDC: About Flu Forecasting](https://www.cdc.gov/flu/weekly/flusight/how-flu-forecasting.htm)
+
+### Relationship with $R_t$ estimation {.smaller}
+
+- In infectious disease epidemiology, many relevant interventions and other changes affect the strength of **transmission**
+- Things that affect transmission don't affect the predicted outcomes directly, but via $R_t$
+- In that sense, predicting infections comes down to **predicting $R_t$**
+- Commonly, forecast models assume **no change** in $R_t$. Is this a good assumption?
+
+### Relationship with nowcasting {.smaller}
+
+- Nowcast: we have **some** data from the dates we're predicting
+- Forecast: we have **no** data from the dates we're predicting (usually: because they're in the future)
+
+### Forecasts are usually *probabilistic* {.smaller}
+
+- Because the future is uncertain, it is natural to express predictions in probabilities, e.g. there is a X% chance of exceeding Y hospital admissions.
+
+![](figures/weather_forecast.png)
+
+### Importance of evaluation {.smaller}
+
+- Because forecasts are unconditional (what will happen) we can compare them to data and see how well they did
+- Doing this allows us to answer question like
+  - Are our forecasts any good?
+  - How far ahead can we trust forecasts?
+  - Which model works best for making forecasts?
+- So-called **proper scoring rules** incentivise forecasters to express an honest belief about the future
+- Many proper scoring rules (and other metrics) are available to assess probabilistic forecasts
+
+### The forecasting paradigm {.smaller}
+
+#### Maximise *sharpness* subject to *calibration*
+
+- Statements about the future should be **correct** ("calibration")
+- Statements about the future should aim to have **narrow uncertainty** ("sharpness")
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn {background-color="#447099" transition="fade-in"}
+
+1. Start with a model we used before and use it to make a forecast (using stan)
+2. Evaluate the forecasts using proper scoring rules
+
+#
+
+[Return to the session](../forecasting-concepts)
