@@ -26,34 +26,6 @@ Then you can check that the installation completed successfully by loading the p
 library("nfidd")
 ```
 
-## Installing `cmdstan`
-
-The course relies on running stan through the `cmdstanr` **R** package, which itself uses the `cmdstan` software.
-This requires a separate installation step:
-
-```{r cmdstan_install, eval = FALSE}
-cmdstanr::install_cmdstan()
-```
-
-::: callout-note
-This may take a few minutes.
-Also you're likely to see lots of warnings and other messages printed to your screen - don't worry, this is normal and doesn't mean there is a problem.
-:::
-
-If there are any problems with this, you can try (on Windows) to fix them using
-
-```{r cmdstan_toolchain, eval = FALSE}
-cmdstanr::check_cmdstan_toolchain(fix = TRUE)
-```
-
-You can test that you have a working `cmdstanr` setup using
-
-```{r cmdstan_test}
-cmdstanr::cmdstan_version()
-```
-
-For more details, and for links to resources in case something goes wrong, see the [Getting Started with CmdStanr](https://mc-stan.org/cmdstanr/articles/cmdstanr.html) vignette of the package.
-
 # Accessing the course
 
 To be able to use the code in each session, you will need a local copy of the course material.
@@ -61,10 +33,10 @@ To be able to use the code in each session, you will need a local copy of the co
 -   Directly download the course material:
 
     ::: callout-tip
-    [[**Download**]{.underline}](https://github.com/nfidd/nfidd/archive/refs/heads/main.zip)
+    [[**Download**]{.underline}](https://github.com/nfidd/ueifid/archive/refs/heads/main.zip)
     :::
 
--   Alternatively, if you are familiar with git you can clone the [repo](https://github.com/nfidd/nfidd).
+-   Alternatively, if you are familiar with git you can clone the [repo](https://github.com/nfidd/ueifid).
 
 ### Interacting with the course
 
@@ -72,13 +44,13 @@ In this course, all content is written using [R Notebooks](https://bookdown.org/
 This means that we can combine text with code and see the output directly.
 The notebooks are then directly reproduced on the course website (for example, this page).
 
-To interact with each session in the course, we recommend opening the RStudio Project file (`nfidd.RProj`) in the `nfidd` folder you have just downloaded.
+To interact with each session in the course, we recommend opening the RStudio Project file (`ueifid.RProj`) in the `ueifid` folder you have just downloaded.
 Then you can choose to:
 
 -   View each session on the website, and copy-paste the code into your own R script.
     -   Tip: if you hover over each code chunk on the website you can use a "Copy" button at the top right corner.
 -   Open the R Notebook for each session.
-    -   Each notebook is saved in `nfidd/sessions/` as a `.qmd` file.
+    -   Each notebook is saved in `ueifid/sessions/` as a `.qmd` file.
     -   Execute code with the single green "play" button at the top-right corner of each code chunk ("Run current chunk"). You can also execute code line-by-line using `Ctrl/Cmd + Enter`.
     -   We suggest using "Visual" view for a better experience (top-left of the RStudio pane).
 
