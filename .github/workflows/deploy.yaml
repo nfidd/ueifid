@@ -31,11 +31,11 @@ jobs:
       - name: Install dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages:
+          packages:
             any::gh,
             any::knitr,
             any::rmarkdown,
-            local::.,
+            nfidd/nfidd
 
       - name: Install cmdstan
         uses: epinowcast/actions/install-cmdstan@v1
