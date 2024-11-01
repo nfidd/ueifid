@@ -1,7 +1,7 @@
 
-# Nowcasting and forecasting infectious disease dynamics
+# Understanding, evaluating, and improving forecasts of infectious disease burden,
 
-This repository contains the material to create the nfidd course page.
+This repository contains the material to create the course page.
 
 All the raw material is in the folder `sessions/` and is written in
 `quarto`. Any changes to the quarto files are automatically updated on
