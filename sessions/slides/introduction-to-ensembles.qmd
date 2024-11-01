@@ -1,6 +1,6 @@
 ---
 title: "Multi-model ensembles"
-author: "Nowcasting and forecasting of infectious disease dynamics"
+author: "Understanding, evaluating, and improving forecasts of infectious disease burden"
 format:
   revealjs:
     output: slides/forecasting-as-an-epidemiological-problem.html
