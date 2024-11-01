@@ -4,9 +4,9 @@ project:
     - "*.qmd"
 
 website:
-  title: "NFIDD"
+  title: "UEIFID"
   site-url: https://nfidd.github.io/nfidd/
-  description: "Nowcasting and forecasting infectious disease dynamics"
+  description: "Understanding, evaluating, and improving forecasts of infectious disease burden"
   body-footer: '<script data-goatcounter="https://nfidd.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
   open-graph: true
   navbar:
