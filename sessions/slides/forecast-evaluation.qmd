@@ -1,11 +1,11 @@
 ---
-title: "Forecasting models"
-author: "Nowcasting and forecasting of infectious disease dynamics"
+title: "Forecast evaluation"
+author: "Understanding, evaluating, and improving forecasts of infectious disease burden"
 engine: knitr
 format:
   revealjs:
-    output: slides/forecasting-as-an-epidemiological-problem.html
-    footer: "Forecasting as an epidemiological problem"
+    output: slides/forecast-evaluation.html
+    footer: "Forecast evaluatino"
     slide-level: 3
 ---
 
@@ -157,14 +157,28 @@ Aim to capture relevant mechanisms but without going to the individual level.
 
 ::::
 
-## `r fontawesome::fa("laptop-code", "white")` Your Turn {.smaller background-color="#447099" transition="fade-in"}
+### Importance of evaluation {.smaller}
 
-1. Review the performance of the random walk model
-2. Motivate a mechanism to order to address some of the issues
-3. Motivate a statistical approach aiming to address the same issues
-4. Compare the performance of these models for a single forecast
-5. Evaluate many forecast from these models and compare their performance
+- Because forecasts are unconditional (what will happen) we can compare them to data and see how well they did
+- Doing this allows us to answer question like
+  - Are our forecasts any good?
+  - How far ahead can we trust forecasts?
+  - Which model works best for making forecasts?
+- So-called **proper scoring rules** incentivise forecasters to express an honest belief about the future
+- Many proper scoring rules (and other metrics) are available to assess probabilistic forecasts
 
-# 
+### The forecasting paradigm {.smaller}
 
-[Return to the session](../forecasting-concepts)
+#### Maximise *sharpness* subject to *calibration*
+
+- Statements about the future should be **correct** ("calibration")
+- Statements about the future should aim to have **narrow uncertainty** ("sharpness")
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn {background-color="#447099" transition="fade-in"}
+
+1. Load forecasts from the model we have visualised previously.
+2. Evaluate the forecasts using proper scoring rules
+
+#
+
+[Return to the session](../forecast-evaluation)
