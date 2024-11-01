@@ -9,7 +9,7 @@ We can classify models along a spectrum by how much they include an understandin
 These different approaches all have different strength and weaknesses, and it is not clear a prior which one produces the best forecast in any given situation.
 One way to attempt to draw strength from a diversity of approaches is the creation of so-called *forecast ensembles* from the forecasts produced by different models.
 
-In this session, we'll start with forecasts from the models we explored in the [forecasting models](forecasting-models) session and build ensembles of these models. 
+In this session, we'll start with forecasts from models of different levels of mechanism vs. statistical complexity and build ensembles of these models. 
 We will then compare the performance of these ensembles to the individual models and to each other.
 Rather than using the forecast samples we have been using we will instead now use quantile-based forecasts. 
 
@@ -33,7 +33,7 @@ If we characterise a predictive distribution by its quantiles, we specify these 
 
 ## Objectives
 
-The aim of this session is to introduce the concept of ensembles of forecasts and to evaluate the performance of ensembles of the models we explored in the [forecasting models](forecasting-models) session.
+The aim of this session is to introduce the concept of ensembles of forecasts and to evaluate the performance of ensembles of the multiple models.
 
 ::: {.callout-note collapse="true"}
 
@@ -45,7 +45,7 @@ The source file of this session is located at `sessions/forecast-ensembles.qmd`.
 
 ## Libraries used
 
-In this session we will use the `nfidd` package to load a data set of infection times and access stan models and helper functions, the `dplyr` and `tidyr` packages for data wrangling, `ggplot2` library for plotting, the `tidybayes` package for extracting results of the inference and the `scoringutils` package for evaluating forecasts.
+In this session we will use the `nfidd` package to load a data set of infection times and access stan models and helper functions, the `dplyr`  and `tidyr` packages for data wrangling, `ggplot2` library for plotting, the `tidybayes` package for extracting results of the inference and the `scoringutils` package for evaluating forecasts.
 We will also use `qra` for quantile regression averaging in the weighted ensemble section.
 
 ```{r libraries, message = FALSE}
@@ -74,15 +74,15 @@ set.seed(123)
 
 # Individual forecast models
 
-In this session we will use the forecasts from the models we explored in the session on [forecasting models](forecasting-models). There all shared the same basic renewal with delays structure but used different models for the evolution of the effective reproduction number over time. These were:
+In this session we will use the forecasts from different models. There all shared the same basic renewal with delays structure but used different models for the evolution of the effective reproduction number over time. These were:
 
-- A random walk model
+- A random walk model (what we have looked at so far)
 - A differenced autoregressive model referred to as "More statistical"
 - A simple model of susceptible depeltion referred to as "More mechanistic"
 
 For the purposes of this session the precise details of the models are not critical to the concepts we are exploring.
 
-As in the session on [forecasting concepts](forecasting-concepts), we have fitted these models to a range of forecast dates so you don't have to wait for the models to fit.
+As previously, we have fitted these models to a range of forecast dates so you don't have to wait for the models to fit.
 We will now evaluate the forecasts from the mechanistic and statistical models.
 
 ```{r load_forecasts}
@@ -99,8 +99,6 @@ forecasts
 
 ::: {.callout-tip collapse="true"}
 ## How did we generate these forecasts?
-We generated these forecasts using the code in `data-raw/generate-example-forecasts.r` which uses the same approach we just took before for a single forecast date but generalises it to many forecast dates.
-
 Some important things to note about these forecasts:
 
   - We used a 14 day forecast horizon.
@@ -317,7 +315,7 @@ Are there any differences across forecast dates?
 
 ## Evaluation 
 
-As in the [forecasting concepts session](forecasting-concepts), we can evaluate the accuracy of the ensembles using the `{scoringutils}` package and in particular the `score()` function.
+As in the [forecast evaluation session](forecast-evaluation), we can evaluate the accuracy of the ensembles using the `{scoringutils}` package and in particular the `score()` function.
 
 ```{r score-ensembles}
 ensemble_scores <- simple_ensembles |>
@@ -743,7 +741,7 @@ weighted_ensemble_scores |>
   summarise_scores(by = c("model"))
 ```
 
-Remembering the session on [forecasting concepts](forecasting-concepts), we should also check performance on the log scale. 
+Remembering the session on [forecast evaluation](forecast-evaluation), we should also check performance on the log scale. 
 
 ```{r score-overview-weighted-log}
 log_ensemble_scores <- weighted_ensembles |>
@@ -767,7 +765,7 @@ How do the weighted ensembles compare to the simple ensembles on the natural and
 
 ::: {.callout-note collapse="true"}
 ## Solution
-How do the weighted ensembles compare to the simple ensembles on the natural and log scale?
+The best ensembles slightly outperform some of the simple ensembles but there is no obvious benefit from using weighted ensembles. Why might this be the case?
 :::
 
 # Going further
