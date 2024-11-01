@@ -5,11 +5,8 @@ comments: false
 
 ## Forecasting
 
-- understanding of forecasting as an epidemiological problem, and its relationship with nowcasting and $R_t$ estimation
+- understanding of forecasting as an epidemiological problem
 - understanding of the difference between forecasts, projections and scenarios
-- familiarity with common forecasting models and their properties, and applicability in epidemiology
-- ability to use a common forecasting model on an epidemiological time series in R
-- ability to use a semi-mechanistic model for forecasting an epidemiological time series in R
 
 ## Evaluating forecasts
 
