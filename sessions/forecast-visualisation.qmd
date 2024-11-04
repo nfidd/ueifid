@@ -313,6 +313,11 @@ Do they seem to under or over predict consistently?
   - It looks like the model is consistently over predicting on the natural scale but this is less clear on the log scale.
 :::
 
+# Going further
+
+- What other ways could we visualise the forecasts especially if we had forecasts from multiple models and locations or both?
+- Based on these visualisations how could we improve the model?
+
 # Wrap up
 
 # References
