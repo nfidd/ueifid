@@ -36,9 +36,9 @@ cat(":::: {.columns}\n")
 for (instructor in seq_along(whoarewe)) {
   cat(
     "::: {.column width=\"", floor(100 / length(whoarewe)), "%\"}\n",
-    "![](", whoarewe[[instructor]]$avatar_url, ")\n",
+    "![](", whoarewe[[instructor]]$avatar_url, ")\n\n",
     "[", whoarewe[[instructor]]$name, "](",
-    whoarewe[[instructor]]$html_url, ")\n",
+    whoarewe[[instructor]]$html_url, ")\n\n",
     ":::\n", sep = ""
   )
 }
