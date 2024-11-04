@@ -24,3 +24,4 @@ The following is a highly subjective list of papers we would recommend to read f
 - Asher, [Forecasting Ebola with a regression transmission model](10.1016/j.epidem.2017.02.009) describes model that implements an extension to the random walk with a drift term.
 - CDC, code repo for [Wastewater-informed COVID-19 forecasting](https://github.com/CDCgov/wastewater-informed-covid-forecasting).
 - Hyndman and Athanasopoulos, [Forecasting: Principles and Practice (free online text book)](https://otexts.com/fpp3/) is a textbook on forecasting with a range of time series models and a great resource for finding out more about them.
+- Ribeiro et al., [Post-processing and weighted combination of infectious disease nowcasts]( https://doi.org/10.1101/2024.08.28.24312701) discusses the challenges in improving on the predictive performance of simpler approaches using weighted ensembles.
