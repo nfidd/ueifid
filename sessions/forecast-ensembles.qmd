@@ -78,7 +78,7 @@ In this session we will use the forecasts from different models. There all share
 
 - A random walk model (what we have looked at so far)
 - A differenced autoregressive model referred to as "More statistical"
-- A simple model of susceptible depeltion referred to as "More mechanistic"
+- A simple model of susceptible depletion referred to as "More mechanistic"
 
 For the purposes of this session the precise details of the models are not critical to the concepts we are exploring.
 
