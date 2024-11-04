@@ -1,0 +1,47 @@
+---
+title: "Introduction and course overview"
+order: 0
+---
+
+[Introduction to the course and the instructors](slides/introduction-to-the-course-and-the-instructors)
+
+### Aim of the course
+
+In this course we will explore how to:
+
+-   Visualize and interpret infectious disease forecasts
+-   Evaluate forecast performance and limitations
+-   Combine multiple forecasts into ensembles
+
+Predictive modeling has become crucial for public health decision-making and pandemic preparedness. 
+Through this workshop, we aim to make forecast interpretation and evaluation more accessible to academics and public health institutions.
+
+### Approach
+
+Each session in the course:
+
+- builds on the previous one so that participants will have an overview of forecast evaluation by the end of the course;
+- starts with a short introductory talk;
+- mainly consists of interactive content that participants will work through;
+- has optional/additional material that can be skipped or completed after the course ends;
+
+For those attending the in-person version the course also:
+
+- has multiple instructors ready to answer questions about this content; if several people have a similar question we may pause the session and discuss it with the group;
+- ends with a wrap-up and discussion where we review the sessions material.
+
+### Timeline for the course
+
+The course consists of four main sessions spread across an afternoon.
+If you are attending the in-person version of the course, the schedule is available [here](/sessions).
+If you are studying this material on your own using the website, you can go through it at your own pace.
+
+Let's get started!
+
+-   Have a more detailed look at the [learning objectives](/learning_objectives)
+
+-   [Introduction to the course and the instructors](slides/introduction-to-the-course-and-the-instructors)
+
+-   If you haven't already, start with [getting set up for the course](/getting-set-up)
+
+-   [Visualising infectious disease forecasts](forecast-visualisation)

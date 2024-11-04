@@ -5,7 +5,7 @@ project:
 
 website:
   title: "UEIFID"
-  site-url: https://nfidd.github.io/nfidd/
+  site-url: https://nfidd.github.io/ueifid/
   description: "Understanding, evaluating, and improving forecasts of infectious disease burden"
   body-footer: '<script data-goatcounter="https://nfidd.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
   open-graph: true
@@ -22,7 +22,7 @@ website:
         href: sessions.qmd
     right:
       - icon: github
-        href: https://github.com/nfidd/nfidd
+        href: https://github.com/nfidd/ueifid
   sidebar:
     - id: sessions
       title: "Sessions"
