@@ -30,7 +30,8 @@ All contributions to this project are gratefully acknowledged using the
 following the [all-contributors](https://allcontributors.org)
 specification. Contributions of any kind are welcome!
 
-<a href="https://github.com/nfidd/ueifid/commits?author=sbfnk">sbfnk</a>
+<a href="https://github.com/nfidd/ueifid/commits?author=sbfnk">sbfnk</a>,
+<a href="https://github.com/nfidd/ueifid/commits?author=seabbs">seabbs</a>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
