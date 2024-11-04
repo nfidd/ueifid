@@ -34,7 +34,7 @@ comments: false
 
 *There is a coffee break at 15:30-15:40 you are welcome to attend this or keep working through the course material.*
 
-## Session 3: Forecast ensembles
+## Session 4: Forecast ensembles
 
 15:50-17:10
 
@@ -42,7 +42,7 @@ comments: false
 - Practice session: Creating forecast ensembles (60 mins)
 - Wrap up (10 mins)
 
-## Session 4: End of course summary
+## Session 5: End of course summary
 
 17:10-17:30
 
