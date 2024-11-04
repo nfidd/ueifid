@@ -11,21 +11,6 @@ One way to attempt to draw strength from a diversity of approaches is the creati
 
 In this session, we'll start with forecasts from models of different levels of mechanism vs. statistical complexity and build ensembles of these models.
 We will then compare the performance of these ensembles to the individual models and to each other.
-Rather than using the forecast samples we have been using we will instead now use quantile-based forecasts.
-
-::: {.callout-note collapse="true"}
-## Representations of probabilistic forecasts
-
-Probabilistic predictions can be described as coming from a probabilistic probability distributions.
-In general and when using complex models such as the one we discuss in this course, these distributions can not be expressed in a simple analytical formal as we can do if, e.g. talking about common probability distributions such as the normal or gamma distributions.
-Instead, we typically use a limited number of samples generated from Monte-Carlo methods to represent the predictive distribution.
-However, this is not the only way to characterise distributions.
-
-A quantile is the value that corresponds to a given quantile level of a distribution.
-For example, the median is the 50th quantile of a distribution, meaning that 50% of the values in the distribution are less than the median and 50% are greater.
-Similarly, the 90th quantile is the value that corresponds to 90% of the distribution being less than this value.
-If we characterise a predictive distribution by its quantiles, we specify these values at a range of specific quantile levels, e.g. from 5% to 95% in 5% steps.
-:::
 
 ## Slides
 
@@ -257,44 +242,332 @@ head(onset_df)
 
 :::
 
-# Converting sample-based forecasts to quantile-based forecasts
 
-As in this session we will be thinking about forecasts in terms quantiles of the predictive distributions, we will need to convert our sample based forecasts to quantile-based forecasts.
-We will do this by focusing at the *marginal distribution* at each predicted time point, that is we treat each time point as independent of all others and calculate quantiles based on the sample predictive trajectories at that time point.
-An easy way to do this is to use the `{scoringutils}` package.
-The steps to do this are to first declare the forecasts as `sample` forecasts.
+# Visualising your forecast
 
-```{r convert-for-scoringutils}
-sample_forecasts <- forecasts |>
+As in the [forecasting evaluation sessions](forecast-evaluation) session, we will first visualise the forecasts across multiple forecast dates.
+
+```{r plot-all-forecasts}
+forecasts |>
+  filter(.draw %in% sample(.draw, 100)) |>
+  ggplot(aes(x = day)) +
+  geom_line(aes(y = .value, group = interaction(.draw, target_day), col = target_day), alpha = 0.1) +
+  geom_point(data = onset_df |>
+    filter(day >= 21),
+    aes(x = day, y = onsets), color = "black") +
+  scale_color_binned(type = "viridis") +
+  facet_wrap(~model) +
+  lims(y = c(0, 500))
+```
+
+As for the single forecast it is helpful to also plot the forecast on the log scale.
+
+```{r plot-all-forecasts-log}
+forecasts |>
+  filter(.draw %in% sample(.draw, 100)) |>
+  ggplot(aes(x = day)) +
+  geom_line(
+    aes(y = .value, group = interaction(.draw, target_day), col = target_day),
+    alpha = 0.1
+  ) +
+  geom_point(data = onset_df, aes(x = day, y = onsets), color = "black") +
+
+  scale_color_binned(type = "viridis") +
+  facet_wrap(~model)
+```
+
+::: {.callout-tip}
+## Take 5 minutes
+How do these forecasts compare?
+Which do you prefer?
+:::
+
+::: {.callout-note collapse="true"}
+## Solution
+How do these forecasts compare?
+
+- The more mechanistic model captures the downturn in the data very well.
+- Past the peak all models were comparable.
+- The more statistical model captures the downturn faster than the random walk but less fast than the more mechanistic mode.
+- The more statistical model sporadically predicts a more rapidly growing outbreak than occurred early on.
+- The more statistical model is more uncertain than the mechanistic model but less uncertain than the random walk.
+
+Which do you prefer?
+
+- The more mechanistic model seems to be the best at capturing the downturn in the data and the uncertainty in the forecasts seems reasonable.
+- If we weren't confident in the effective susceptible population the AR model might be preferable.
+:::
+
+## Scoring your forecast
+
+Again as in the [forecasting evaluation sessions](forecast-evaluation), we will score the forecasts using the `scoringutils` package by first converting the forecasts to the `scoringutils` format.
+```{r convert-forecasts}
+sc_forecasts <- forecasts |>
   left_join(onset_df, by = "day") |>
   filter(!is.na(.value)) |>
   as_forecast_sample(
-    forecast_unit = c("target_day", "horizon", "model", "day"),
+    forecast_unit = c(
+      "target_day", "horizon", "model"
+    ),
     observed = "onsets",
     predicted = ".value",
     sample_id = ".draw"
   )
-sample_forecasts
+sc_forecasts
 ```
 
-and then convert to `quantile` forecasts.
 
-```{r convert-to-quantile}
-quantile_forecasts <- sample_forecasts |>
-  as_forecast_quantile()
-quantile_forecasts
+Everything seems to be in order. We can now calculate some metrics as we did in the [forecasting concepts session](forecasting-concepts).
+
+```{r score-forecasts}
+sc_scores <- sc_forecasts |>
+  score()
+
+sc_scores
+```
+  scale_y_log10(limits = c(NA, 500)) +
+::: {.callout-note collapse="true"}
+## Learning more about the output of `score()`
+
+See the documentation for `?get_metrics.forecast_sample` for information on the default sample metrics.
+:::
+
+### At a glance
+
+Let's summarise the scores by model first.
+
+```{r}
+sc_scores |>
+  summarise_scores(by = "model")
 ```
 
-::: {.callout-tip collapse="true"}
-## What is happening here?
+::: {.callout-tip}
+## Take 2 minutes
+Before we look in detail at the scores, what do you think the scores are telling you? Which model do you think is best?
+:::
 
-- Internally `scoringutils` is calculating the quantiles of the sample-based forecasts.
-- It does this by using a set of default quantiles but different ones can be specified by the user to override the default.
-- It then calls the `quantile()` function from base R to calculate the quantiles.
-- This is estimating the value that corresponds to each given quantile level by ordering the samples and then taking the value at the appropriate position.
+### Continuous ranked probability score
+
+As in the [forecasting concepts session](forecasting-concepts), we will start by looking at the CRPS by horizon and forecast date.
+
+::: {.callout-tip}
+## Reminder: Key things to note about the CRPS
+  - Small values are better
+  - As it is an absolute scoring rule it can be difficult to use to compare forecasts across scales.
+:::
+
+First by forecast horizon.
+
+```{r}
+sc_scores |>
+  summarise_scores(by = c("model", "horizon")) |>
+  ggplot(aes(x = horizon, y = crps, col = model)) +
+  geom_point()
+```
+
+and across different forecast dates
+
+```{r}
+sc_scores |>
+  summarise_scores(by = c("target_day", "model")) |>
+  ggplot(aes(x = target_day, y = crps, col = model)) +
+  geom_point()
+```
+
+::: {.callout-tip}
+## Take 5 minutes 
+How do the CRPS scores change based on forecast date?
+How do the CRPS scores change with forecast horizon?
+:::
+
+::: {.callout-note collapse="true"}
+## Solution
+How do the CRPS scores change based on forecast horizon?
+
+- All models have increasing CRPS with forecast horizon.
+- The more mechanistic model has the lowest CRPS at all forecast horizon.
+- The more stastical model starts to outperform the random walk model at longer time horizons.
+
+How do the CRPS scores change with forecast date?
+
+- The more statistical model does particularly poorly around the peak of the outbreak but outperforms the random walk model.
+- The more mechanistic model does particularly well around the peak of the outbreak versus all other models
+- The more statistical model starts to outperfrom the other models towards the end of the outbreak.
+
+:::
+
+### PIT histograms
+
+::: {.callout-tip}
+## Reminder: Interpreting the PIT histogram
+- Ideally PIT histograms should be uniform. 
+- If is a U shape then the model is overconfident and if it is an inverted U shape then the model is underconfident. 
+- If it is skewed then the model is biased towards the direction of the skew.
+:::
+
+
+Let's first look at the overall PIT histogram.
+
+```{r pit-histogram}
+sc_forecasts |>
+  get_pit_histogram(by = "model") |>
+  ggplot(aes(x = mid, y = density)) +
+  geom_col() +
+  facet_wrap(~model)
+```
+
+As before let's look at the PIT histogram by forecast horizon (to save space we will group horizons)
+
+```{r pit-histogram-horizon}
+sc_forecasts |>
+  mutate(group_horizon = case_when(
+    horizon <= 3 ~ "1-3",
+    horizon <= 7 ~ "4-7",
+    horizon <= 14 ~ "8-14"
+  )) |>
+  get_pit_histogram(by = c("model", "group_horizon")) |>
+  ggplot(aes(x = mid, y = density)) +
+  geom_col() +
+  facet_grid(vars(model), vars(group_horizon))
+```
+
+and then for different forecast dates.
+
+```{r pit-histogram-date, fig.width = 10}
+sc_forecasts |>
+  get_pit_histogram(by = c("model", "target_day")) |>
+  ggplot(aes(x = mid, y = density)) +
+  geom_col() +
+  facet_grid(vars(model), vars(target_day))
+```
+
+::: {.callout-tip}
+## Take 5 minutes
+What do you think of the PIT histograms?
+:::
+
+::: {.callout-note collapse="true"}
+## Solution
+What do you think of the PIT histograms?
+
+- The more mechanistic model is reasonably well calibrated but has a slight tendency to be overconfident.
+- The random walk is biased towards overpredicting.
+- The more statistical model is underconfident.
+- Across horizons the more mechanistic model is only liable to underpredict at the longest horizons.
+- The random walk model is initially relatively unbiased and well calibrated but becomes increasingly likely to overpredict as the horizon increases.
+- The forecast date stratified PIT histograms are hard to interpret. We may need to find other ways to visualise bias and calibration at this level of stratification (see the `{scoringutils}` documentation for some ideas).
+
+:::
+
+## Scoring on the log scale
+
+Again as in the [forecast evaluation session](forecast-evaluation), we will also score the forecasts on the log scale.
+
+```{r log-convert-forecasts}
+log_sc_forecasts <- sc_forecasts |>
+  transform_forecasts(
+    fun = log_shift,
+    offset = 1,
+    append = FALSE
+  )
+
+log_sc_scores <- log_sc_forecasts |>
+  score()
+```
+
+
+::: {.callout-tip}
+Reminder: For more on scoring on the log scale see [this paper on scoring forecasts on transformed scales](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011393).
+:::
+
+### At a glance
+
+```{r}
+log_sc_scores |>
+  summarise_scores(by = "model")
+```
+
+::: {.callout-tip}
+## Take 2 minutes
+Before we look in detail at the scores, what do you think the scores are telling you? Which model do you think is best?
+:::
+
+### CRPS
+
+```{r}
+log_sc_scores |>
+  summarise_scores(by = c("model", "horizon")) |>
+  ggplot(aes(x = horizon, y = crps, col = model)) +
+  geom_point()
+```
+
+```{r}
+log_sc_scores |>
+  summarise_scores(by = c("target_day", "model")) |>
+  ggplot(aes(x = target_day, y = crps, col = model)) +
+  geom_point()
+```
+
+::: {.callout-tip}
+## Take 5 minutes 
+How do the CRPS scores on the log scale compare to the scores on the original scale?
+:::
+
+::: {.callout-note collapse="true"}
+## Solution
+- The performance of the mechanistic model is more variable across forecast horizon than on the natural scale.
+- On the log scale the by horizon performance of the random walk and more statistical mdoel is more comparable than on the log scale.
+- The period of high incidence dominates the target day stratified scores less on the log scale. We see that all models performed less well early and late on.
+:::
+
+### PIT histograms
+
+```{r pit-histogram-log}
+log_sc_forecasts |>
+  get_pit_histogram(by = "model") |>
+  ggplot(aes(x = mid, y = density)) +
+  geom_col() +
+  facet_wrap(~model)
+```
+
+
+```{r pit-histogram-horizon-log}
+log_sc_forecasts |>
+  mutate(group_horizon = case_when(
+    horizon <= 3 ~ "1-3",
+    horizon <= 7 ~ "4-7",
+    horizon <= 14 ~ "8-14"
+  )) |>
+  get_pit_histogram(by = c("model", "group_horizon")) |>
+  ggplot(aes(x = mid, y = density)) +
+  geom_col() +
+  facet_grid(vars(model), vars(group_horizon))
+```
+
+
+```{r pit-histogram-date-log, fig.width = 10}
+log_sc_forecasts |>
+  get_pit_histogram(by = c("model", "target_day")) |>
+  ggplot(aes(x = mid, y = density)) +
+  geom_col() +
+  facet_grid(vars(model), vars(target_day))
+```
+
+::: {.callout-tip}
+## Take 5 minutes
+What do you think of the PIT histograms?
+:::
+
+::: {.callout-note collapse="true"}
+## Solution
+The PIT histograms are similar to the original scale PIT histograms but the mechanistic model appears better calibrated.
 :::
 
 # Going further
+
+- We have only looked at three forecasting models here. There are many more models that could be used. For example, we could use a more complex mechanistic model which captures more of the underlying dynamics of the data generating process. We could also use a more complex statistical model which captures more of the underlying structure of the data.
+- We could also combine the more mechanistic and more statistical models to create a hybrid model which captures the best of both worlds (maybe).
+- We could also use a more complex scoring rule to evaluate the forecasts. For example, we could use a multivariate scoring rule which captures more of the structure of the data.
 
 # Wrap up
 
