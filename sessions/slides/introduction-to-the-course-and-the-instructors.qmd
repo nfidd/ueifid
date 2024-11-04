@@ -47,4 +47,4 @@ cat("::::\n")
 
 # Next step
 
-Navigate to <https://nfidd.github.io/ueifid> and click "Getting set up for the course'.
+Navigate to <https://bit.ly/idm-forecasting>
