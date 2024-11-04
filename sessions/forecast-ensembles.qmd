@@ -9,7 +9,25 @@ As we saw in the [forecast evaluation session](forecast-evaluation-of-multiple-m
 One way to attempt to draw strength from a diversity of approaches is the creation of so-called *forecast ensembles* from the forecasts produced by different models.
 
 In this session, we'll build ensembles using forecasts from models of different levels of mechanism vs. statistical complexity.
-As in the last session, we will use quantile-based forecasts.
+We will then compare the performance of these ensembles to the individual models and to each other.
+Rather than using the forecast samples we have been using we will instead now use quantile-based forecasts.
+
+::: {.callout-note collapse="true"}
+## Representations of probabilistic forecasts
+
+Probabilistic predictions can be described as coming from a probabilistic probability distributions.
+In general and when using complex models such as the one we discuss in this course, these distributions can not be expressed in a simple analytical formal as we can do if, e.g. talking about common probability distributions such as the normal or gamma distributions.
+Instead, we typically use a limited number of samples generated from Monte-Carlo methods to represent the predictive distribution.
+However, this is not the only way to characterise distributions.
+
+A quantile is the value that corresponds to a given quantile level of a distribution.
+For example, the median is the 50th quantile of a distribution, meaning that 50% of the values in the distribution are less than the median and 50% are greater.
+Similarly, the 90th quantile is the value that corresponds to 90% of the distribution being less than this value.
+If we characterise a predictive distribution by its quantiles, we specify these values at a range of specific quantile levels, e.g. from 5% to 95% in 5% steps.
+
+Deciding how to represent forecasts depends on many things, for example the method used (and whether it produces samples by default) but also logistic considerations.
+Many collaborative forecasting projects and so-called forecasting hubs use quantile-based representations of forecasts in the hope to be able to characterise both the centre and tails of the distributions more reliably and with less demand on storage space than a sample-based representation.
+:::
 
 ## Slides
 
@@ -102,7 +120,10 @@ head(onset_df)
 
 # Converting sample-based forecasts to quantile-based forecasts
 
-As in the last session, we will need to convert our sample based forecasts to quantile-based forecasts.
+As in this session we will be thinking about forecasts in terms quantiles of the predictive distributions, we will need to convert our sample based forecasts to quantile-based forecasts.
+We will do this by focusing at the *marginal distribution* at each predicted time point, that is we treat each time point as independent of all others and calculate quantiles based on the sample predictive trajectories at that time point.
+An easy way to do this is to use the `{scoringutils}` package.
+The steps to do this are to first declare the forecasts as `sample` forecasts.
 
 ```{r convert-for-scoringutils}
 sample_forecasts <- forecasts |>
@@ -124,6 +145,15 @@ quantile_forecasts <- sample_forecasts |>
   as_forecast_quantile()
 quantile_forecasts
 ```
+
+::: {.callout-tip collapse="true"}
+## What is happening here?
+
+- Internally `scoringutils` is calculating the quantiles of the sample-based forecasts.
+- It does this by using a set of default quantiles but different ones can be specified by the user to override the default.
+- It then calls the `quantile()` function from base R to calculate the quantiles.
+- This is estimating the value that corresponds to each given quantile level by ordering the samples and then taking the value at the appropriate position.
+:::
 
 # Simple unweighted ensembles
 
