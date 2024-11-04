@@ -5,7 +5,7 @@ order: 8
 
 # Introduction
 
-As we saw in the [forecast evaluation session](forecast-evaluation-of-multiple-models), different modelling approaches have different strength and weaknesses, and it is not clear a prior which one produces the best forecast in any given situation.
+As we saw in the [forecast evaluation session](forecast-evaluation-of-multiple-models), different modelling approaches have different strength and weaknesses, and it is not clear a priori which one produces the best forecast in any given situation.
 One way to attempt to draw strength from a diversity of approaches is the creation of so-called *forecast ensembles* from the forecasts produced by different models.
 
 In this session, we'll build ensembles using forecasts from models of different levels of mechanism vs. statistical complexity.
