@@ -5,7 +5,7 @@ order: 8
 
 # Introduction
 
-As we saw in the [forecast evaluation session](forecast-evaluation-of-multiple-models), different modelling approaches have different strength and weaknesses, and it is not clear a prior which one produces the best forecast in any given situation.
+As we saw in the [forecast evaluation session](forecast-evaluation-of-multiple-models), different modelling approaches have different strength and weaknesses, and it is not clear a priori which one produces the best forecast in any given situation.
 One way to attempt to draw strength from a diversity of approaches is the creation of so-called *forecast ensembles* from the forecasts produced by different models.
 
 In this session, we'll build ensembles using forecasts from models of different levels of mechanism vs. statistical complexity.
@@ -30,7 +30,7 @@ The source file of this session is located at `sessions/forecast-ensembles.qmd`.
 ## Libraries used
 
 In this session we will use the `nfidd` package to load a data set of infection times and access stan models and helper functions, the `dplyr`  and `tidyr` packages for data wrangling, `ggplot2` library for plotting, the `tidybayes` package for extracting results of the inference and the `scoringutils` package for evaluating forecasts.
-We will also use `qra` for quantile regression averaging in the weighted ensemble section.
+We will also use `qrensemble` for quantile regression averaging in the weighted ensemble section.
 
 ```{r libraries, message = FALSE}
 library("nfidd")
@@ -38,7 +38,7 @@ library("dplyr")
 library("tidyr")
 library("ggplot2")
 library("scoringutils")
-library("qra")
+library("qrensemble")
 ```
 
 ::: {.callout-tip}
