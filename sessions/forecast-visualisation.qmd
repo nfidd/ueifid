@@ -61,10 +61,14 @@ The only difference is that here we extend the model into the future.
 
 # Extending a model into the future
 
-We will a data set of infections we are providing in the `nfidd` R package, and look at forecasts made using a renewal equation model.
-This model simply assumes that number infectious people determines the number of future infectious people via the reproduction number $R_t$.
+We will use a data set of infections we generate using functions from the `nfidd` R package, and look at forecasts made using a renewal equation model.
+This model assumes that number infectious people determines the number of future infectious people via the reproduction number $R_t$.
+
+::: {.callout-note collapse="true"}
+# The reproduction number $R_t$ (optional)
 
 The reproduction number $R_t$ (sometimes called the _effective_ reproduction number) more generally describes the average number of secondary infections caused by a single infectious individual and can vary in time and space as a function of differences in population level susceptibility, changes in behaviour, policy, seasonality etc. The reproduction number $R_t$ is therefore a more general concept than the _basic_ reproduction number $R_0$ which represents the average number of secondary infections caused by a single infectious individual in a completely susceptible population.
+:::
 
 ::: {.callout-tip collapse="true"}
 # The discrete renewal equation (optional)
