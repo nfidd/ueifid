@@ -29,6 +29,23 @@ whoarewe <- lapply(sort(instructors), \(instructor) {
 - no comprehensive training resource for infectious disease forecasting
 :::
 
+# Aim of the course
+
+::: {.incremental}
+- learn to visualize and interpret infectious disease forecasts
+- evaluate forecasts using multiple approaches
+- create forecast ensembles to improve predictions
+:::
+
+# Approach
+
+Each session in the course:
+::: {.incremental}
+- builds on the previous one so that participants will have an overview of forecast evaluation by the end of the course
+- starts with a short introductory talk
+- mainly consists of interactive content that participants will work through
+:::
+
 # Who are we?
 
 ```{r whoarewe, results='asis'}
@@ -36,9 +53,9 @@ cat(":::: {.columns}\n")
 for (instructor in seq_along(whoarewe)) {
   cat(
     "::: {.column width=\"", floor(100 / length(whoarewe)), "%\"}\n",
-    "![](", whoarewe[[instructor]]$avatar_url, ")\n",
+    "![](", whoarewe[[instructor]]$avatar_url, ")\n\n",
     "[", whoarewe[[instructor]]$name, "](",
-    whoarewe[[instructor]]$html_url, ")\n",
+    whoarewe[[instructor]]$html_url, ")\n\n",
     ":::\n", sep = ""
   )
 }

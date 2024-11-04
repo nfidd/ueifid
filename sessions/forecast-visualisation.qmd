@@ -6,7 +6,7 @@ bibliography: ueifid.bib
 
 # Introduction
 
-Epidemiological forecasts are probabilistic statements about what might happen in the future of population disease burden.
+Epidemiological forecasts are probabilistic statements about what might happen to population disease burden in the future.
 In this session we will make some simple forecasts using a commonly used infectious disease model, based on the renewal equation.
 We will see how we can visualise such forecasts, and visually compare them to what really happened.
 
@@ -56,16 +56,19 @@ set.seed(123)
 Forecasting is the process of making predictions about the future based on past and present data.
 In the context of infectious disease epidemiology, forecasting is usually the process of predicting the future course of some metric of infectious disease incidence or prevalence based on past and present data.
 Here we focus on forecasting observed data (the number of individuals with new symptom onset) but forecasts can also be made for other quantities of interest such as the number of infections, the reproduction number, or the number of deaths.
-Epidemiological forecasting is closely related to nowcasting and, when using mechanistic approaches, estimation of the reproduction number. In fact, the model we will use for forecasting is the same as the model we used for nowcasting and estimation of the reproduction number.
-The only difference is that we will extend the model into the future.
-In order to make things simpler we will remove the nowcasting part of the model, but in principle all these approaches could be combined in a single model.
+Epidemiological forecasting is closely related to nowcasting and, when using mechanistic approaches, estimation of the reproduction number. In fact, the model we will use for forecasting could also be used for [real-time estimation of the reproduction number](https://nfidd.github.io/nfidd/sessions/R-estimation-and-the-renewal-equation.html) and [nowcasting](https://nfidd.github.io/nfidd/sessions/joint-nowcasting.html).
+The only difference is that here we extend the model into the future.
 
 # Extending a model into the future
 
-We will a data set of infections we are providing in the `nfidd` R package, and look at forecasts made using a renewal equation model.
-This model simply assumes that number infectious people determines the number of future infectious people via the reproduction number $R_t$.
+We will use a data set of infections we generate using functions from the `nfidd` R package, and look at forecasts made using a renewal equation model.
+This model assumes that number infectious people determines the number of future infectious people via the reproduction number $R_t$.
+
+::: {.callout-info}
+# The reproduction number $R_t$
 
 The reproduction number $R_t$ (sometimes called the _effective_ reproduction number) more generally describes the average number of secondary infections caused by a single infectious individual and can vary in time and space as a function of differences in population level susceptibility, changes in behaviour, policy, seasonality etc. The reproduction number $R_t$ is therefore a more general concept than the _basic_ reproduction number $R_0$ which represents the average number of secondary infections caused by a single infectious individual in a completely susceptible population.
+:::
 
 ::: {.callout-tip collapse="true"}
 # The discrete renewal equation (optional)
@@ -80,14 +83,57 @@ $$
 
 Here, $I_t$ is the number of infected individuals on day $t$, $R_t$ is the current value of the reproduction number and $g_i$ is the probability of a secondary infection occurring $i$ days after the infector became infected themselves, with a maximum $g_\mathrm{max}$.
 
-The forecasting model we visualise in this session is based on $R_t$ doing a random walk in time.
-The step size of this random walk is estimated from data, and this is then used to project into the future.
+The forecasting model we visualise in this session is based on $R_t$ doing a geometric random walk in time.
+The step size of this geometric random walk is estimated from data, and this is then used to project into the future.
 For more information on this approach to forecasting see, for example, @funk2018real.
+
+::: {.callout-note collapse="true"}
+# The geometric random walk model (optional)
+
+We might expect the reproduction number to change smoothly over time (except in situations of drastic change such as a very effective intervention) and to be similar at adjacent time points. We can model this by assuming that the reproduction number at time $t$ is a random draw from a normal distribution with mean equal to the reproduction number at time $t-1$ and some standard deviation $\sigma$. This can be described as a random walk model for the reproduction number. In fact, rather than using this model directly, a better choice might be to use a model where the logarithm of the reproduction number does a random walk, as this will ensure that the reproduction number is always positive and that changes are multiplicative rather than additive (i.e as otherwise the same absolute change in the reproduction number would have a larger effect when the reproduction number is small which likely doesn't match your intuition for how outbreaks evolve over time). We can write this model as
+
+$$
+\sigma \sim HalfNormal(0, 0.05) \\
+$$
+$$
+\log(R_0) \sim \mathcal{Lognormal}(-0.1, 0.5)
+$$
+$$
+\log(R_t) \sim \mathcal{N}(\log(R_{t-1}), \sigma)
+$$
+
+Here we have placed a prior on the standard deviation of the random walk, which we have assumed to be half-normal (i.e., normal but restricted to being non-negative) with a mean of 0 and a standard deviation of 0.05. This is a so-called _weakly informative prior_ that allows for some variation in the reproduction number over time but not an unrealistic amount. We have also placed a prior on the initial reproduction number, which we have assumed to be log-normally distributed with a mean of -0.1 and a standard deviation of 0.5. This is a weakly informative prior that allows for a wide range of initial reproduction numbers but has a mean of approximately 1.
+The last line is the geometric random walk.
+
+## Simulating a geometric random walk
+
+You can have a look at an R function for performing the geometric random walk:
+
+```{r geometric-random-walk}
+geometric_random_walk
+```
+
+We can use this function to simulate a random walk:
+
+```{r simulate-geometric-walk}
+R <- geometric_random_walk(init = 1, noise = rnorm(100), std = 0.1)
+data <- tibble(t = seq_along(R), R = exp(R))
+
+ggplot(data, aes(x = t, y = R)) +
+  geom_line() +
+  labs(title = "Simulated data from a random walk model",
+       x = "Time",
+       y = "R")
+```
+
+You can repeat this multiple times either with the same parameters or changing some to get a feeling for what this does.
+
+:::
 
 :::
 
 We will now look at some data from an infectious disease outbreak and forecasts from a renewal equation model.
-First, we load the data from the `nfidd` package
+First, we simulate some data using functions from the `nfidd` package.
 
 ```{r, load-simulated-onset}
 gen_time_pmf <- make_gen_time_pmf()
@@ -102,9 +148,15 @@ This uses a data set of infection times that is included in the R package, and a
 Do not worry too much about the details of this.
 The important thing is that we now have a data set `onset_df` of symptom onset.
 
+::: {.callout-tip collapse="true"}
+# How does this work?
+
+If you want to see how this works look at the function code by running `simulate_onsets` in the console.
+:::
+
 ## Visualising the forecast
 
-We can now visualise a forecast made from a renewal equation model we used for forecasting.
+We can now visualise a forecast made from the renewal equation model we used for forecasting.
 Once again, this forecast is provided in the `nfidd` package which we loaded earlier.
 We will first extract the forecast and then plot the forecasted number of symptom onsets alongside the observed number of symptom onsets before the forecast was made.
 
@@ -260,6 +312,11 @@ Does the uncertainty seem reasonable?
 Do they seem to under or over predict consistently?
   - It looks like the model is consistently over predicting on the natural scale but this is less clear on the log scale.
 :::
+
+# Going further
+
+- What other ways could we visualise the forecasts especially if we had forecasts from multiple models and locations or both?
+- Based on these visualisations how could we improve the model?
 
 # Wrap up
 
