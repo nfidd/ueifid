@@ -9,9 +9,9 @@ We can classify models along a spectrum by how much they include an understandin
 These different approaches all have different strength and weaknesses, and it is not clear a prior which one produces the best forecast in any given situation.
 One way to attempt to draw strength from a diversity of approaches is the creation of so-called *forecast ensembles* from the forecasts produced by different models.
 
-In this session, we'll start with forecasts from models of different levels of mechanism vs. statistical complexity and build ensembles of these models. 
+In this session, we'll start with forecasts from models of different levels of mechanism vs. statistical complexity and build ensembles of these models.
 We will then compare the performance of these ensembles to the individual models and to each other.
-Rather than using the forecast samples we have been using we will instead now use quantile-based forecasts. 
+Rather than using the forecast samples we have been using we will instead now use quantile-based forecasts.
 
 ::: {.callout-note collapse="true"}
 ## Representations of probabilistic forecasts
@@ -63,7 +63,7 @@ The best way to interact with the material is via the [Visual Editor](https://do
 
 ## Initialisation
 
-We set a random seed for reproducibility. 
+We set a random seed for reproducibility.
 Setting this ensures that you should get exactly the same results on your computer as we do.
 
 ```{r}
@@ -132,7 +132,7 @@ ggplot(data, aes(x = t, y = Rt)) +
 ```
 :::
 
-The key assumptions we are making here are: 
+The key assumptions we are making here are:
 
 - The population is constant and we roughly know the size of the population.
 - The reproduction number only changes due to susceptible depletion
@@ -152,7 +152,7 @@ A statistical term that can be used to describe a time series with a trend is sa
 More specifically, a _stationary_ time series is defined as one whose statistical properties, such as mean and variance, do not change over time.
 In infectious disease epidemiology, this would only be expected for endemic diseases without external seasonal influence.
 
-The random walk model we used in the [forecasting visualisation session](forecast-visualisation) is a special case of a more general class of models called _autoregressive (AR) models_. 
+The random walk model we used in the [forecasting visualisation session](forecast-visualisation) is a special case of a more general class of models called _autoregressive (AR) models_.
 AR models are a class of models which predict the next value in a time series as a linear combination of the previous values in the time series.
 The random walk model is specifically a special case of an AR(1) model where the next value in the time series is predicted as the previous value, multiplied by a value between 1 and -1 , plus some noise. This becomes a random walk when the multipled value is 0.
 
