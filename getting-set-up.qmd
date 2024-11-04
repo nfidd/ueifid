@@ -22,6 +22,11 @@ To install the packages needed in the course, including the `nfidd` package that
 
 ```{r install, eval=FALSE}
 install.packages("pak")
+options(repos = c(
+  CRAN = "https://cloud.r-project.org",
+  "stan-dev" = "https://stan-dev.r-universe.dev",
+  "epiforecasts" = "https://epiforecasts.r-universe.dev"
+))
 pak::pak("nfidd/nfidd", dependencies = "all", upgrade = TRUE)
 ```
 
