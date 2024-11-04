@@ -6,7 +6,7 @@ bibliography: ueifid.bib
 
 # Introduction
 
-Epidemiological forecasts are probabilistic statements about what might happen in the future of population disease burden.
+Epidemiological forecasts are probabilistic statements about what might happen to population disease burden in the future.
 In this session we will make some simple forecasts using a commonly used infectious disease model, based on the renewal equation.
 We will see how we can visualise such forecasts, and visually compare them to what really happened.
 
@@ -56,9 +56,8 @@ set.seed(123)
 Forecasting is the process of making predictions about the future based on past and present data.
 In the context of infectious disease epidemiology, forecasting is usually the process of predicting the future course of some metric of infectious disease incidence or prevalence based on past and present data.
 Here we focus on forecasting observed data (the number of individuals with new symptom onset) but forecasts can also be made for other quantities of interest such as the number of infections, the reproduction number, or the number of deaths.
-Epidemiological forecasting is closely related to nowcasting and, when using mechanistic approaches, estimation of the reproduction number. In fact, the model we will use for forecasting is the same as the model we used for nowcasting and estimation of the reproduction number.
-The only difference is that we will extend the model into the future.
-In order to make things simpler we will remove the nowcasting part of the model, but in principle all these approaches could be combined in a single model.
+Epidemiological forecasting is closely related to nowcasting and, when using mechanistic approaches, estimation of the reproduction number. In fact, the model we will use for forecasting could also be used for [real-time estimation of the reproduction number](https://nfidd.github.io/nfidd/sessions/R-estimation-and-the-renewal-equation.html) and [nowcasting](https://nfidd.github.io/nfidd/sessions/joint-nowcasting.html).
+The only difference is that here we extend the model into the future.
 
 # Extending a model into the future
 
