@@ -18,14 +18,21 @@ comments: false
 
 ## Session 2: Forecast evaluation
 
-14:10-15:20
+14:10-15:00
 
-- An overview of forecasting models (10 mins)
-- Practice session: Evaluating forecasts from a range of models (60 mins)
+- An introduction to forecast evaluation (5 mins)
+- Practice session: Evaluating forecasts from a range of models (40 mins)
+- Wrap up (5 mins)
 
-15:30-15:50
+## Session 3: Evaluating forecasts from multiple models
 
-- Wrap up and discussion (20 mins)
+15:10-15:50
+
+- Why might we want to evaluate forecasts from multiple models? (5 mins)
+- Practice session: Evaluating forecasts from multiple models (40 mins)
+- Wrap up (5 mins)
+
+*There is a coffee break at 15:30-15:40 you are welcome to attend this or keep working through the course material.*
 
 ## Session 3: Forecast ensembles
 
