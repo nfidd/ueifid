@@ -5,7 +5,7 @@ engine: knitr
 format:
   revealjs:
     output: slides/forecast-evaluation.html
-    footer: "Forecast evaluatino"
+    footer: "Forecast evaluation"
     slide-level: 3
 ---
 
