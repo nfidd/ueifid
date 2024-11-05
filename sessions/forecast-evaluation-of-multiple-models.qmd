@@ -384,7 +384,7 @@ How do the CRPS values change with forecast date?
 
 - The more statistical model does particularly poorly around the peak of the outbreak but outperforms the random walk model.
 - The more mechanistic model does particularly well around the peak of the outbreak versus all other models
-- The more statistical model starts to outperfrom the other models towards the end of the outbreak.
+- The more statistical model starts to outperform the other models towards the end of the outbreak.
 
 :::
 
