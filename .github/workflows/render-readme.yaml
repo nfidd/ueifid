@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          packages: any::rmarkdown, any::allcontributors, nfidd/nfidd
+          packages: any::rmarkdown, any::allcontributors, nfidd
 
       - name: Update contributors
         if: github.ref == 'refs/heads/main'

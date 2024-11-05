@@ -37,7 +37,7 @@ jobs:
             any::gh,
             any::knitr,
             any::rmarkdown,
-            nfidd/nfidd
+            nfidd
 
       - name: Install cmdstan
         uses: epinowcast/actions/install-cmdstan@v1
