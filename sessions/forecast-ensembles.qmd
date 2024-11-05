@@ -767,8 +767,6 @@ How do the weighted ensembles compare to the simple ensembles on the natural and
 The best ensembles slightly outperform some of the simple ensembles but there is no obvious benefit from using weighted ensembles. Why might this be the case?
 :::
 
-# Going further
-
 # Wrap up
 
 # References
