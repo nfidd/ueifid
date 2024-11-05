@@ -22,7 +22,8 @@ format:
 
 - forecast visualisation (session 1)
 - forecast evaluation (session 2)
-- forecast ensembles (sesion 3)
+- forecast evaluation of multiple models (session 3)
+- forecast ensembles (session 4)
 
 # Key takeaways
 
@@ -40,7 +41,7 @@ format:
 ### Session 3: Forecast ensembles
 
 - forecasts can combine **forecasts from multiple models** 
-- simple ensembles often outperform indivdiual models
+- simple ensembles often outperform individual models
 - weighted ensembles can learn from past performance aiming to make better forecasts
 
 ### Outlook {.smaller}
