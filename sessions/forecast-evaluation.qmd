@@ -184,7 +184,7 @@ By balancing these two aspects, the CRPS provides a comprehensive measure of the
 ::: {.callout-tip}
 ## Key things to note about the CRPS
   - Small values are better
-  - As it is an absolute scoring rule it can be difficult to use to compare forecasts across scales.
+  - When scoring absolute values (e.g. number of cases) it can be difficult to use to compare forecasts across scales (i.e., when case numbers are different, for example between locations or at different times).
 :::
 
 
