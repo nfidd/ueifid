@@ -40,6 +40,7 @@ whoarewe <- lapply(sort(instructors), \(instructor) {
 # Approach
 
 Each session in the course:
+
 ::: {.incremental}
 - builds on the previous one so that participants will have an overview of forecast evaluation by the end of the course
 - starts with a short introductory talk
@@ -53,7 +54,7 @@ cat(":::: {.columns}\n")
 for (instructor in seq_along(whoarewe)) {
   cat(
     "::: {.column width=\"", floor(100 / length(whoarewe)), "%\"}\n",
-    "![](", whoarewe[[instructor]]$avatar_url, ")\n\n",
+    "![](", whoarewe[[instructor]]$avatar_url, "){width=\"100%\"}\n\n",
     "[", whoarewe[[instructor]]$name, "](",
     whoarewe[[instructor]]$html_url, ")\n\n",
     ":::\n", sep = ""
