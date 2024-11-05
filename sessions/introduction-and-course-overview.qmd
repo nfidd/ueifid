@@ -42,4 +42,4 @@ Let's get started!
 
 -   If you haven't already, start with [getting set up for the course](/getting-set-up)
 
--   [Visualising infectious disease forecasts](forecast-visualisation)
+-   Start the course by learning about [Visualising infectious disease forecasts](forecast-visualisation)
