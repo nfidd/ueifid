@@ -346,7 +346,7 @@ Before we look in detail at the scores, what do you think the scores are telling
 
 ### Continuous ranked probability score
 
-As in the [forecasting concepts session](forecasting-concepts), we will start by looking at the CRPS by horizon and forecast date.
+As in the [forecasting evaluation](forecasting-evaluation) session, we will start by looking at the CRPS by horizon and forecast date.
 
 ::: {.callout-tip}
 ## Reminder: Key things to note about the CRPS
