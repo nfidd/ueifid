@@ -262,7 +262,7 @@ How do they differ from each other?
 ## Solution
 How do these ensembles compare to the individual models?
 
-- Both of the simple ensembles appear to be less variable than the statistical models but have more variable than the mechanistic model.
+- Both of the simple ensembles appear to be less variable than the statistical models but are more variable than the mechanistic model.
 - Both ensembles are more like the statistical models than the mechanistic model.
 
 How do they differ from each other?
