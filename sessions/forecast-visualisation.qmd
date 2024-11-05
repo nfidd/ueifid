@@ -172,6 +172,27 @@ previous_onsets <- onset_df |>
   filter(day <= forecast_day)
 ```
 
+::: {.callout-tip collapse="true"}
+## How did we generate these forecasts?
+Some important things to note about these forecasts:
+
+  - We used a 14 day forecast horizon.
+  - Each forecast used all the data up to the forecast date.
+  - We generated 1000 predictive posterior samples for each forecast.
+  - We started forecasting 3 weeks into the outbreak and then forecast every 7 days until the end of the data (excluding the last 14 days to allow a full forecast).
+  - We use the same simulated outbreak data as before:
+
+```{r}
+gen_time_pmf <- make_gen_time_pmf()
+ip_pmf <- make_ip_pmf()
+onset_df <- simulate_onsets(
+  make_daily_infections(infection_times), gen_time_pmf, ip_pmf
+)
+head(onset_df)
+```
+
+:::
+
 ```{r plot_forecast}
 forecast |>
   filter(.draw %in% sample(.draw, 100)) |>
