@@ -7,10 +7,8 @@ order: 7
 
 We can classify models along a spectrum by how much they include an understanding of underlying processes, or mechanisms; or whether they emphasise drawing from the data using a statistical approach.
 These different approaches all have different strength and weaknesses, and it is not clear a prior which one produces the best forecast in any given situation.
-One way to attempt to draw strength from a diversity of approaches is the creation of so-called *forecast ensembles* from the forecasts produced by different models.
 
-In this session, we'll start with forecasts from models of different levels of mechanism vs. statistical complexity and build ensembles of these models.
-We will then compare the performance of these ensembles to the individual models and to each other.
+In this session, we'll start with forecasts from models of different levels of mechanism vs. statistical complexity and evaluate them using visualisation and proper scoring rules as we did in the last session for the random walk model
 
 ## Slides
 
