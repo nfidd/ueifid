@@ -323,12 +323,6 @@ sc_scores <- sc_forecasts |>
 
 sc_scores
 ```
-  scale_y_log10(limits = c(NA, 500)) +
-::: {.callout-note collapse="true"}
-## Learning more about the output of `score()`
-
-See the documentation for `?get_metrics.forecast_sample` for information on the default sample metrics.
-:::
 
 ### At a glance
 
