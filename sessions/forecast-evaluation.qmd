@@ -75,8 +75,7 @@ rw_forecasts |>
   ungroup()
 ```
 
-
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 Some important things to note about these forecasts:
 
 - We used a 14 day forecast horizon.
