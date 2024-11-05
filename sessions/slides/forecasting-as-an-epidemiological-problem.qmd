@@ -19,7 +19,7 @@ format:
 
 Modelling the future can help decision making:
 
-- how many beds to we need?
+- how many beds do we need?
 - where should we allocate vaccines?
 - where should we trial vaccines?
 
