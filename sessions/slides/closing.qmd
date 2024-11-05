@@ -38,10 +38,10 @@ format:
 - we can assess forecasts using **proper scoring rules**
 - we can use scoring to quantify the predictive performance of different models
 
-### Session 3: Forecast ensembles
+## Session 3: Forecast ensembles {.smaller}
 
-- forecasts can combine **forecasts from multiple models** 
-- simple ensembles often outperform individual models
+- ensembles can combine **forecasts from multiple models**
+- simple ensembles often outperform indivdiual models
 - weighted ensembles can learn from past performance aiming to make better forecasts
 
 ### Outlook {.smaller}
@@ -52,6 +52,11 @@ format:
 ![](figures/respicast-forecasts.png)
 
 [https://respicast.ecdc.europa.eu/](https://respicast.ecdc.europa.eu/)
+
+### Further learning {.smaller}
+
+- Some suggested reading is given in the [End of course summary and discussion](../end-of-course-summary-and-discussion)
+- You can find broader course material on the topic at <https://nfidd.github.io/nfidd>
 
 ### Feedback {.smaller}
 
