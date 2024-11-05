@@ -30,9 +30,15 @@ All contributions to this project are gratefully acknowledged using the
 following the [all-contributors](https://allcontributors.org)
 specification. Contributions of any kind are welcome!
 
-<a href="https://github.com/nfidd/ueifid/commits?author=sbfnk">sbfnk</a>,
+### Code
+
 <a href="https://github.com/nfidd/ueifid/commits?author=seabbs">seabbs</a>,
+<a href="https://github.com/nfidd/ueifid/commits?author=sbfnk">sbfnk</a>,
 <a href="https://github.com/nfidd/ueifid/commits?author=github-merge-queue[bot]">github-merge-queue\[bot\]</a>
+
+### Issues
+
+<a href="https://github.com/nfidd/ueifid/issues?q=is%3Aissue+author%3Ajamesmbaazam">jamesmbaazam</a>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
