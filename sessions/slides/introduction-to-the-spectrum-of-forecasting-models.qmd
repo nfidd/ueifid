@@ -160,7 +160,7 @@ Aim to capture relevant mechanisms but without going to the individual level.
 
 ## `r fontawesome::fa("laptop-code", "white")` Your Turn {background-color="#447099" transition="fade-in"}
 
-1. Load forecasts from the model we have visualised previously.
+1. Load forecasts from three models of different levels of mechanism and statistical complexity.
 2. Evaluate the forecasts using proper scoring rules
 
 #
