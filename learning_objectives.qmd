@@ -6,7 +6,7 @@ comments: false
 ## Forecasting
 
 - understanding of forecasting as an epidemiological problem
-- understanding of the difference between forecasts, projections and scenarios
+- understanding of ways to visualise forecasts
 
 ## Evaluating forecasts
 
