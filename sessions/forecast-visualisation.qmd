@@ -249,9 +249,9 @@ This is a common pattern in forecasting where a model is good at capturing the s
 :::
 
 We managed to learn quite a lot about our model's forecasting limitations just looking at a single forecast using visualisations. However, what if we wanted to quantify how well the model is doing?
-In order to do that we need to look at multiple forecasts
+In order to do that we need to look at multiple forecasts from the model.
 
-## Visualising multiple forecasts
+## Visualising multiple forecasts from a single model
 
 As for a single forecast, our first step is to visualise the forecasts as this can give us a good idea of how well the model is doing without having to calculate any metrics.
 
