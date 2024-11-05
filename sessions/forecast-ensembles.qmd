@@ -322,6 +322,12 @@ ensemble_scores <- simple_ensembles |>
   score()
 ```
 
+::: {.callout-note}
+The **weighted interval score (WIS)** is a proper scoring rule for quantile forecasts that approximates the **Continuous Ranked Probability Score (CRPS)** by considering a weighted sum of multiple prediction intervals. As the number of intervals increases, the WIS converges to the CRPS, combining sharpness and penalties for over- and under-prediction.
+
+We see it here as we are scoring quantiles and not samples hence we cannot use CRPS as we did before.
+:::
+
 Again we start with a high level overview of the scores by model.
 
 ```{r score-overview}
