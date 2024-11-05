@@ -78,12 +78,11 @@ set.seed(123)
 
 In this session we will use the forecasts from different models we introduced in the [forecasting evaluation of multiple models session](forecast-evaluation-of-multiple-models). There all shared the same basic renewal with delays structure but used different models for the evolution of the effective reproduction number over time. These were:
 
-- A random walk model (what we have looked at so far)
+- A random walk model
 - A simple model of susceptible depletion referred to as "More mechanistic"
 - A differenced autoregressive model referred to as "More statistical"
 
 As previously, we have fitted these models to a range of forecast dates so you don't have to wait for the models to fit.
-We will now evaluate the forecasts from the mechanistic and statistical models.
 
 ```{r load_forecasts}
 data(rw_forecasts, stat_forecasts, mech_forecasts)
