@@ -75,14 +75,14 @@ rw_forecasts |>
   ungroup()
 ```
 
-
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
+## How did we generate these forecasts?
 Some important things to note about these forecasts:
 
-- We used a 14 day forecast horizon.
-- Each forecast used all the data up to the forecast date.
-- We generated 1000 samples from the predictive distribution for each forecast.
-- We started forecasting 3 weeks into the outbreak, and then forecast once a week (every 7 days), i.e., we created forecasts on day 22, day 29, ... to day 71. We excluded the last 14 days to allow a full forecast.
+  - We used a 14 day forecast horizon.
+  - Each forecast used all the data up to the forecast date.
+  - We generated 1000 predictive posterior samples for each forecast.
+  - We started forecasting 3 weeks into the outbreak and then forecast every 7 days until the end of the data (excluding the last 14 days to allow a full forecast).
   - We use the same simulated outbreak data as before:
 
 ```{r}
