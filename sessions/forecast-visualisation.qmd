@@ -56,8 +56,9 @@ set.seed(123)
 Forecasting is the process of making predictions about the future based on past and present data.
 In the context of infectious disease epidemiology, forecasting is usually the process of predicting the future course of some metric of infectious disease incidence or prevalence based on past and present data.
 Here we focus on forecasting observed data (the number of individuals with new symptom onset) but forecasts can also be made for other quantities of interest such as the number of infections, the reproduction number, or the number of deaths.
-Epidemiological forecasting is closely related to nowcasting and, when using mechanistic approaches, estimation of the reproduction number. In fact, the model we will use for forecasting could also be used for [real-time estimation of the reproduction number](https://nfidd.github.io/nfidd/sessions/R-estimation-and-the-renewal-equation.html) and [nowcasting](https://nfidd.github.io/nfidd/sessions/joint-nowcasting.html).
-The only difference is that here we extend the model into the future.
+Epidemiological forecasting is closely related to nowcasting and, when using mechanistic approaches, estimation of the reproduction number.
+In fact, the model we will use for forecasting could also be used for real-time estimation of the reproduction number and nowcasting, two tasks we won't have time to go into here but which are discussed in the [longer version of this course](https://nfidd.github.io/nfidd/).
+The only difference to these tasks is that here we extend the model into the future.
 
 # Extending a model into the future
 
