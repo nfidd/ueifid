@@ -1,11 +1,10 @@
+# Overview
+
 Each session in this course uses R code for demonstration.
+All the content is self-contained within a R software package designed for the course and uses notebooks for each session.
 
 If you would like to you can follow the course material without installing any software or running any code. 
 However, if you would like to run the code yourself, you will need to follow the instructions below.
-
-# Overview
-
-All the content is self-contained within a R software package designed for the course and uses notebooks for each session.
 
 # Getting R
 
