@@ -69,7 +69,7 @@ For the purposes of this session the precise details of the models are not criti
 ::: {.callout-note collapse="true"}
 
 ## More information on the mechanistic model (optional)
-One way to potentially improve the renewal model is to add more mechanistic structure. In the [forecasting concepts session](forecasting-concepts), we saw that the renewal model was making unbiased forecasts when the reproduction number was constant but that it overestimated the number of cases when the reproduction number was reducing due to susceptible depletion.
+One way to potentially improve the renewal model is to add more mechanistic structure. In the [forecasting visualisation session](forecasting-visualisation), we saw that the renewal model was making unbiased forecasts when the reproduction number was constant but that it overestimated the number of cases when the reproduction number was reducing due to susceptible depletion.
 
 ::: {.callout-warning}
 This is slightly cheating as we know the future of this outbreak and so can make a model to match. This is easy to do and important to watch for if wanting to make generalisable methods.
