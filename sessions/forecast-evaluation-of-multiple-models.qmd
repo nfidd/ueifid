@@ -7,10 +7,8 @@ order: 7
 
 We can classify models along a spectrum by how much they include an understanding of underlying processes, or mechanisms; or whether they emphasise drawing from the data using a statistical approach.
 These different approaches all have different strength and weaknesses, and it is not clear a prior which one produces the best forecast in any given situation.
-One way to attempt to draw strength from a diversity of approaches is the creation of so-called *forecast ensembles* from the forecasts produced by different models.
 
-In this session, we'll start with forecasts from models of different levels of mechanism vs. statistical complexity and build ensembles of these models.
-We will then compare the performance of these ensembles to the individual models and to each other.
+In this session, we'll start with forecasts from models of different levels of mechanism vs. statistical complexity and evaluate them using visualisation and proper scoring rules as we did in the last session for the random walk model
 
 ## Slides
 
@@ -245,7 +243,7 @@ head(onset_df)
 
 # Visualising your forecast
 
-As in the [forecasting evaluation sessions](forecast-evaluation) session, we will first visualise the forecasts across multiple forecast dates.
+As in the [forecasting evaluation](forecast-evaluation) session, we will first visualise the forecasts across multiple forecast dates.
 
 ```{r plot-all-forecasts}
 forecasts |>
@@ -325,12 +323,6 @@ sc_scores <- sc_forecasts |>
 
 sc_scores
 ```
-  scale_y_log10(limits = c(NA, 500)) +
-::: {.callout-note collapse="true"}
-## Learning more about the output of `score()`
-
-See the documentation for `?get_metrics.forecast_sample` for information on the default sample metrics.
-:::
 
 ### At a glance
 
@@ -348,7 +340,7 @@ Before we look in detail at the scores, what do you think the scores are telling
 
 ### Continuous ranked probability score
 
-As in the [forecasting concepts session](forecasting-concepts), we will start by looking at the CRPS by horizon and forecast date.
+As in the [forecasting evaluation](forecasting-evaluation) session, we will start by looking at the CRPS by horizon and forecast date.
 
 ::: {.callout-tip}
 ## Reminder: Key things to note about the CRPS
@@ -392,7 +384,7 @@ How do the CRPS values change with forecast date?
 
 - The more statistical model does particularly poorly around the peak of the outbreak but outperforms the random walk model.
 - The more mechanistic model does particularly well around the peak of the outbreak versus all other models
-- The more statistical model starts to outperfrom the other models towards the end of the outbreak.
+- The more statistical model starts to outperform the other models towards the end of the outbreak.
 
 :::
 
