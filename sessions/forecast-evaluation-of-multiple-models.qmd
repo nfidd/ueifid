@@ -243,7 +243,7 @@ head(onset_df)
 
 # Visualising your forecast
 
-As in the [forecasting evaluation sessions](forecast-evaluation) session, we will first visualise the forecasts across multiple forecast dates.
+As in the [forecasting evaluation](forecast-evaluation) session, we will first visualise the forecasts across multiple forecast dates.
 
 ```{r plot-all-forecasts}
 forecasts |>
