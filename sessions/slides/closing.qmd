@@ -49,7 +49,7 @@ format:
 - it is worth trying some of these methods here in practice to learn more about typical forecast performance
 - one way of doing so is by contributing to forecast hubs
 
-![](figures/respicast.png)
+![](figures/respicast-forecasts.png)
 
 [https://respicast.ecdc.europa.eu/](https://respicast.ecdc.europa.eu/)
 
