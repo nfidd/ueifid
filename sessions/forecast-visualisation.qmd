@@ -151,7 +151,7 @@ The important thing is that we now have a data set `onset_df` of symptom onset.
 ::: {.callout-tip collapse="true"}
 # How does this work?
 
-If you want to see how this works look at the function code by running `simulate_onsets` in the console.
+If you want to see how this works look at the function code by typing `simulate_onsets` in the console.
 :::
 
 ## Visualising the forecast
