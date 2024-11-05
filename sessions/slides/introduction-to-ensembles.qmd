@@ -1,10 +1,11 @@
 ---
-title: "Multi-model ensembles"
+title: "Introduction to ensembles"
 author: "Understanding, evaluating, and improving forecasts of infectious disease burden"
+engine: knitr
 format:
   revealjs:
-    output: slides/forecasting-as-an-epidemiological-problem.html
-    footer: "Multi-model ensembles"
+    output: slides/introduction-to-ensembles.html
+    footer: "Introduction to ensembles"
 slide-level: 3
 ---
 
