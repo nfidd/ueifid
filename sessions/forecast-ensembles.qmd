@@ -688,12 +688,6 @@ Which do you think is best?
 Are you surprised by the results? Can you think of any reasons that would explain them?
 :::
 
-::: {.callout-note collapse="true"}
-## Solution
-How do the weighted ensembles compare to the simple ensembles?
-
-:::
-
 ### Models weights
 
 Now that we have a weighted ensemble, we can also look at the weights of the individual models. Here we do this for the quantile regression averaging ensemble but we could also do this for the inverse WIS ensemble or any other weighted ensemble (for an unweighted ensemble the weights are all equal).
