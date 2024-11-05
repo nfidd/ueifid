@@ -302,14 +302,24 @@ Would you visualise the forecast in a different way?
 
 ::: {.callout-note collapse="true"}
 ## Solution
+What do you think of these forecasts?
+
   - We think these forecasts are a reasonable place to start but there is definitely room for improvement.
+
 Are they any good?
+
   - They seem to do a reasonable job of capturing the short term dynamics but struggle with the longer term dynamics.
+
 How well do they capture changes in trend?
+
   - There is little evidence of the model capturing the reduction in onsets before it begins to show in the data.
+
 Does the uncertainty seem reasonable?
+
  - On the natural scale it looks like the model often over predicts. Things seem more balanced on the log scale but the model still seems to be overly uncertain.
+
 Do they seem to under or over predict consistently?
+
   - It looks like the model is consistently over predicting on the natural scale but this is less clear on the log scale.
 :::
 
