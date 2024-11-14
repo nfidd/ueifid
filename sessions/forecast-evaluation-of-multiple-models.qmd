@@ -345,7 +345,7 @@ As in the [forecasting evaluation](forecasting-evaluation) session, we will star
 ::: {.callout-tip}
 ## Reminder: Key things to note about the CRPS
   - Small values are better
-  - When scoring absolute values (e.g. number of cases) it can be difficult to use to compare forecasts across scales (i.e., when case numbers are different, for example between locations or at different times).
+  - When scoring absolute values (e.g. number of cases) it can be difficult to compare forecasts across scales (i.e., when case numbers are different, for example between locations or at different times).
 :::
 
 First by forecast horizon.
