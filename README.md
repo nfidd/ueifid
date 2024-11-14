@@ -34,6 +34,7 @@ specification. Contributions of any kind are welcome!
 
 <a href="https://github.com/nfidd/ueifid/commits?author=seabbs">seabbs</a>,
 <a href="https://github.com/nfidd/ueifid/commits?author=sbfnk">sbfnk</a>,
+<a href="https://github.com/nfidd/ueifid/commits?author=dependabot[bot]">dependabot\[bot\]</a>,
 <a href="https://github.com/nfidd/ueifid/commits?author=github-merge-queue[bot]">github-merge-queue\[bot\]</a>
 
 ### Issues
