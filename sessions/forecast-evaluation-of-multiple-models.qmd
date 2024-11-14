@@ -267,7 +267,7 @@ forecasts |>
     alpha = 0.1
   ) +
   geom_point(data = onset_df, aes(x = day, y = onsets), color = "black") +
-
+  scale_y_log10() +
   scale_color_binned(type = "viridis") +
   facet_wrap(~model)
 ```
