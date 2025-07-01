@@ -247,7 +247,7 @@ As in the [forecasting evaluation](forecast-evaluation) session, we will first v
 forecasts |>
   filter(.draw %in% sample(.draw, 100)) |>
   ggplot(aes(x = day)) +
-  geom_line(aes(y = .value, group = interaction(.draw, target_day), col = target_day), alpha = 0.1) +
+  geom_line(aes(y = .value, group = interaction(.draw, origin_day), col = origin_day), alpha = 0.1) +
   geom_point(data = onset_df |>
     filter(day >= 21),
     aes(x = day, y = onsets), color = "black") +
@@ -263,7 +263,7 @@ forecasts |>
   filter(.draw %in% sample(.draw, 100)) |>
   ggplot(aes(x = day)) +
   geom_line(
-    aes(y = .value, group = interaction(.draw, target_day), col = target_day),
+    aes(y = .value, group = interaction(.draw, origin_day), col = origin_day),
     alpha = 0.1
   ) +
   geom_point(data = onset_df, aes(x = day, y = onsets), color = "black") +
@@ -303,7 +303,7 @@ sc_forecasts <- forecasts |>
   filter(!is.na(.value)) |>
   as_forecast_sample(
     forecast_unit = c(
-      "target_day", "horizon", "model"
+      "origin_day", "horizon", "model"
     ),
     observed = "onsets",
     predicted = ".value",
@@ -359,8 +359,8 @@ and across different forecast dates
 
 ```{r}
 sc_scores |>
-  summarise_scores(by = c("target_day", "model")) |>
-  ggplot(aes(x = target_day, y = crps, col = model)) +
+  summarise_scores(by = c("origin_day", "model")) |>
+  ggplot(aes(x = origin_day, y = crps, col = model)) +
   geom_point()
 ```
 
@@ -425,10 +425,10 @@ and then for different forecast dates.
 
 ```{r pit-histogram-date, fig.width = 10}
 sc_forecasts |>
-  get_pit_histogram(by = c("model", "target_day")) |>
+  get_pit_histogram(by = c("model", "origin_day")) |>
   ggplot(aes(x = mid, y = density)) +
   geom_col() +
-  facet_grid(vars(model), vars(target_day))
+  facet_grid(vars(model), vars(origin_day))
 ```
 
 ::: {.callout-tip}
@@ -493,8 +493,8 @@ log_sc_scores |>
 
 ```{r}
 log_sc_scores |>
-  summarise_scores(by = c("target_day", "model")) |>
-  ggplot(aes(x = target_day, y = crps, col = model)) +
+  summarise_scores(by = c("origin_day", "model")) |>
+  ggplot(aes(x = origin_day, y = crps, col = model)) +
   geom_point()
 ```
 
@@ -537,10 +537,10 @@ log_sc_forecasts |>
 
 ```{r pit-histogram-date-log, fig.width = 10}
 log_sc_forecasts |>
-  get_pit_histogram(by = c("model", "target_day")) |>
+  get_pit_histogram(by = c("model", "origin_day")) |>
   ggplot(aes(x = mid, y = density)) +
   geom_col() +
-  facet_grid(vars(model), vars(target_day))
+  facet_grid(vars(model), vars(origin_day))
 ```
 
 ::: {.callout-tip}
