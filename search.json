@@ -1,0 +1,663 @@
+[
+  {
+    "objectID": "sessions/slides/introduction-to-the-spectrum-of-forecasting-models.html#different-types-of-models",
+    "href": "sessions/slides/introduction-to-the-spectrum-of-forecasting-models.html#different-types-of-models",
+    "title": "Introduction to the spectrum of forecasting models",
+    "section": "Different types of models",
+    "text": "Different types of models\n\n\n\n\nWe can classify models by the level of mechanism they include\nAll of the model types we will introduce in the next few slides have been used for COVID-19 forecasting (the US and/or European COVID-19 forecast hub)\n\nNOTE: level of mechanism \\(\\neq\\) model complexity\n\n\nCramer et al., Scientific Data, 2022"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-the-spectrum-of-forecasting-models.html#your-turn",
+    "href": "sessions/slides/introduction-to-the-spectrum-of-forecasting-models.html#your-turn",
+    "title": "Introduction to the spectrum of forecasting models",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nLoad forecasts from three models of different levels of mechanism and statistical complexity.\nEvaluate the forecasts using proper scoring rules"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-ensembles.html#ensembles",
+    "href": "sessions/slides/introduction-to-ensembles.html#ensembles",
+    "title": "Introduction to ensembles",
+    "section": "Ensembles",
+    "text": "Ensembles\n\nCombine many different models’ forecasts into a single prediction"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-ensembles.html#why-ensemble",
+    "href": "sessions/slides/introduction-to-ensembles.html#why-ensemble",
+    "title": "Introduction to ensembles",
+    "section": "Why ensemble?",
+    "text": "Why ensemble?\n\nMany uncertainties, many approaches: many models\n\nLayers of uncertainty\n\nModel parameters\n\ne.g. parameterising delay distributions\n\nModel structure\n\ne.g. more mechanistic or more statistical approaches\n\n\nWant to use all available information"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-ensembles.html#why-ensemble-1",
+    "href": "sessions/slides/introduction-to-ensembles.html#why-ensemble-1",
+    "title": "Introduction to ensembles",
+    "section": "Why ensemble?",
+    "text": "Why ensemble?\n“Whole is greater than sum of parts”\n\nAverage of multiple predictions is often more performant than any individual model\n\nHistory in weather & economic forecasting\nSeen this in infectious disease forecasting\n\n“Forecast challenges”: Ebola, dengue, flu, COVID-19…"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-ensembles.html#ensemble-methods",
+    "href": "sessions/slides/introduction-to-ensembles.html#ensemble-methods",
+    "title": "Introduction to ensembles",
+    "section": "Ensemble methods",
+    "text": "Ensemble methods\n\n\nSummarising across models to create single (probabilistic) prediction\n\ne.g. average at each models’ probabilistic quantiles\n\nMean\nMedian - trims the outliers, so narrows the uncertainty"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-ensembles.html#ensemble-methods-1",
+    "href": "sessions/slides/introduction-to-ensembles.html#ensemble-methods-1",
+    "title": "Introduction to ensembles",
+    "section": "Ensemble methods",
+    "text": "Ensemble methods\n\nEqual or weighted combination\n\nWeight models by past forecast performance\n\ne.g. using forecast scores\n\nRarely better than equal average"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-ensembles.html#collaborative-modelling",
+    "href": "sessions/slides/introduction-to-ensembles.html#collaborative-modelling",
+    "title": "Introduction to ensembles",
+    "section": "Collaborative modelling",
+    "text": "Collaborative modelling"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-ensembles.html#section",
+    "href": "sessions/slides/introduction-to-ensembles.html#section",
+    "title": "Introduction to ensembles",
+    "section": "",
+    "text": "… European Respicast"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-ensembles.html#single-model",
+    "href": "sessions/slides/introduction-to-ensembles.html#single-model",
+    "title": "Introduction to ensembles",
+    "section": "Single model",
+    "text": "Single model"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-ensembles.html#multiple-models",
+    "href": "sessions/slides/introduction-to-ensembles.html#multiple-models",
+    "title": "Introduction to ensembles",
+    "section": "… Multiple models",
+    "text": "… Multiple models"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-ensembles.html#multi-model-ensemble",
+    "href": "sessions/slides/introduction-to-ensembles.html#multi-model-ensemble",
+    "title": "Introduction to ensembles",
+    "section": "… … Multi-model ensemble",
+    "text": "… … Multi-model ensemble"
+  },
+  {
+    "objectID": "sessions/slides/introduction-to-ensembles.html#your-turn",
+    "href": "sessions/slides/introduction-to-ensembles.html#your-turn",
+    "title": "Introduction to ensembles",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nCreate unweighted and weighted ensembles using forecasts from multiple models.\nEvaluate the forecasts from ensembles compared to their constituent models."
+  },
+  {
+    "objectID": "sessions/slides/forecast-evaluation.html#your-turn",
+    "href": "sessions/slides/forecast-evaluation.html#your-turn",
+    "title": "Forecast evaluation",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nLoad forecasts from the model we have visualised previously.\nEvaluate the forecasts using proper scoring rules"
+  },
+  {
+    "objectID": "sessions/introduction-and-course-overview.html",
+    "href": "sessions/introduction-and-course-overview.html",
+    "title": "Introduction and course overview",
+    "section": "",
+    "text": "Introduction to the course and the instructors\n\nAim of the course\nIn this course we will explore how to:\n\nVisualize and interpret infectious disease forecasts\nEvaluate forecast performance and limitations\nCombine multiple forecasts into ensembles\n\nPredictive modeling has become crucial for public health decision-making and pandemic preparedness. Through this workshop, we aim to make forecast interpretation and evaluation more accessible to academics and public health institutions.\n\n\nApproach\nEach session in the course:\n\nbuilds on the previous one so that participants will have an overview of forecast evaluation by the end of the course;\nstarts with a short introductory talk;\nmainly consists of interactive content that participants will work through;\nhas optional/additional material that can be skipped or completed after the course ends;\n\nFor those attending the in-person version the course also:\n\nhas multiple instructors ready to answer questions about this content; if several people have a similar question we may pause the session and discuss it with the group;\nends with a wrap-up and discussion where we review the sessions material.\n\n\n\nTimeline for the course\nThe course consists of four main sessions spread across an afternoon. If you are attending the in-person version of the course, the schedule is available here. If you are studying this material on your own using the website, you can go through it at your own pace.\nLet’s get started!\n\nHave a more detailed look at the learning objectives\nIf you haven’t already, start with getting set up for the course\nStart the course by learning about Visualising infectious disease forecasts",
+    "crumbs": [
+      "Introduction and course overview"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation.html",
+    "href": "sessions/forecast-evaluation.html",
+    "title": "Forecast evaluation",
+    "section": "",
+    "text": "So far we have focused on visualising forecasts, including confronting them with events that were observed after the forecast was made. Besides visualising the forecasts, we can also summarise performance quantitatively. In this session you will get to know several ways of assessing different aspects of forecast performance.\n\n\n\nForecast evaluation\n\n\n\n\nThe aim of this session is to introduce the concept of forecast evaluation using scoring rules.\n\n\n\n\n\n\nNoteSetup\n\n\n\n\n\n\n\nThe source file of this session is located at sessions/forecast-evaluation.qmd.\n\n\n\nIn this session we will use the nfidd package to load a data set of infection times and access stan models and helper functions, the dplyr and package for data wrangling, ggplot2 library for plotting and the scoringutils package for evaluating forecasts.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"ggplot2\")\nlibrary(\"scoringutils\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.\n\n\n\n\n\nWe set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)",
+    "crumbs": [
+      "Forecast evaluation"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation.html#slides",
+    "href": "sessions/forecast-evaluation.html#slides",
+    "title": "Forecast evaluation",
+    "section": "",
+    "text": "Forecast evaluation",
+    "crumbs": [
+      "Forecast evaluation"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation.html#objectives",
+    "href": "sessions/forecast-evaluation.html#objectives",
+    "title": "Forecast evaluation",
+    "section": "",
+    "text": "The aim of this session is to introduce the concept of forecast evaluation using scoring rules.\n\n\n\n\n\n\nNoteSetup\n\n\n\n\n\n\n\nThe source file of this session is located at sessions/forecast-evaluation.qmd.\n\n\n\nIn this session we will use the nfidd package to load a data set of infection times and access stan models and helper functions, the dplyr and package for data wrangling, ggplot2 library for plotting and the scoringutils package for evaluating forecasts.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"ggplot2\")\nlibrary(\"scoringutils\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.\n\n\n\n\n\nWe set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)",
+    "crumbs": [
+      "Forecast evaluation"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation.html#source-file",
+    "href": "sessions/forecast-evaluation.html#source-file",
+    "title": "Forecast evaluation",
+    "section": "",
+    "text": "The source file of this session is located at sessions/forecast-evaluation.qmd.",
+    "crumbs": [
+      "Forecast evaluation"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation.html#libraries-used",
+    "href": "sessions/forecast-evaluation.html#libraries-used",
+    "title": "Forecast evaluation",
+    "section": "",
+    "text": "In this session we will use the nfidd package to load a data set of infection times and access stan models and helper functions, the dplyr and package for data wrangling, ggplot2 library for plotting and the scoringutils package for evaluating forecasts.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"ggplot2\")\nlibrary(\"scoringutils\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.",
+    "crumbs": [
+      "Forecast evaluation"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation.html#initialisation",
+    "href": "sessions/forecast-evaluation.html#initialisation",
+    "title": "Forecast evaluation",
+    "section": "",
+    "text": "We set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)",
+    "crumbs": [
+      "Forecast evaluation"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation.html#scoring-the-forecasts",
+    "href": "sessions/forecast-evaluation.html#scoring-the-forecasts",
+    "title": "Forecast evaluation",
+    "section": "Scoring the forecasts",
+    "text": "Scoring the forecasts\nWe now summarise performance quantitatively by using scoring metrics. Whilst some of these metrics are more useful for comparing models, many can be also be useful for understanding the performance of a single model.\n\n\n\n\n\n\nTip\n\n\n\nIn this session, we’ll use “proper” scoring rules: these are scoring rules that make sure no model can get better scores than the true model, i.e. the model used to generate the data. Of course we usually don’t know this (as we don’t know the “true model” for real-world data) but proper scoring rules incentivise forecasters to make their best attempt at reproducing its behaviour. For a comprehensive text on proper scoring rules and their mathematical properties, we recommend the classic paper by Gneiting and Raftery (2007).\n\n\nWe will use the {scoringutils} package to calculate these metrics. Our first step is to convert our forecasts into a format that the {scoringutils} package can use. We will use as_forecast_sample() to do this:\n\nsc_forecasts &lt;- rw_forecasts |&gt;\n  left_join(onset_df, by = \"day\") |&gt;\n  filter(!is.na(.value)) |&gt;\n  as_forecast_sample(\n    forecast_unit = c(\n      \"origin_day\", \"horizon\", \"model\"\n    ),\n    observed = \"onsets\",\n    predicted = \".value\",\n    sample_id = \".draw\"\n  )\nsc_forecasts\n\nForecast type: sample\n\n\nForecast unit:\n\n\norigin_day, horizon, and model\n\n\n\n        sample_id predicted observed origin_day horizon       model\n            &lt;int&gt;     &lt;num&gt;    &lt;int&gt;      &lt;num&gt;   &lt;int&gt;      &lt;char&gt;\n     1:         1         9        4         22       1 Random walk\n     2:         2         5        4         22       1 Random walk\n     3:         3         5        4         22       1 Random walk\n     4:         4         3        4         22       1 Random walk\n     5:         5         5        4         22       1 Random walk\n    ---                                                            \n223996:       996         1        2        127      14 Random walk\n223997:       997         1        2        127      14 Random walk\n223998:       998         1        2        127      14 Random walk\n223999:       999         0        2        127      14 Random walk\n224000:      1000         1        2        127      14 Random walk\n\n\nAs you can see this has created a forecast object which has a print method that summarises the forecasts.\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nWhat important information is in the forecast object?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\n\nThe forecast unit which is the target day, horizon, and model\nThe type of forecast which is a sample forecast\n\n\n\n\nEverything seems to be in order. We can now use the scoringutils package to calculate some metrics. We will use the default sample metrics (as our forecasts are in sample format) and score our forecasts.\n\nsc_scores &lt;- sc_forecasts |&gt;\n  score()\n\nsc_scores\n\n     origin_day horizon       model   bias      dss     crps overprediction\n          &lt;num&gt;   &lt;int&gt;      &lt;char&gt;  &lt;num&gt;    &lt;num&gt;    &lt;num&gt;          &lt;num&gt;\n  1:         22       1 Random walk -0.243 1.603150 0.576163          0.000\n  2:         22       2 Random walk  0.830 3.472585 1.910219          1.340\n  3:         22       3 Random walk  0.066 2.257788 0.656429          0.000\n  4:         22       4 Random walk  0.697 3.411297 1.811126          1.068\n  5:         22       5 Random walk  0.800 3.938587 2.422931          1.624\n ---                                                                       \n220:        127      10 Random walk -0.862 3.513198 1.820445          0.000\n221:        127      11 Random walk -0.883 3.977985 2.031831          0.000\n222:        127      12 Random walk -0.949 7.952668 3.113919          0.000\n223:        127      13 Random walk -0.909 4.506476 2.268038          0.000\n224:        127      14 Random walk -0.637 1.154121 0.754148          0.000\n     underprediction dispersion log_score    mad ae_median   se_mean\n               &lt;num&gt;      &lt;num&gt;     &lt;num&gt;  &lt;num&gt;     &lt;num&gt;     &lt;num&gt;\n  1:           0.078   0.498163  1.820300 1.4826         1  0.185761\n  2:           0.000   0.570219  2.493078 2.9652         3 10.067929\n  3:           0.000   0.656429  1.960774 2.9652         0  0.546121\n  4:           0.000   0.743126  2.366781 2.9652         3 11.142244\n  5:           0.000   0.798931  2.653447 2.9652         4 18.224361\n ---                                                                \n220:           1.522   0.298445  2.221751 1.4826         3  5.793649\n221:           1.764   0.267831  3.207126 1.4826         3  6.817321\n222:           2.864   0.249919  4.180468 1.4826         4 14.010049\n223:           2.006   0.262038  3.599418 1.4826         3  7.907344\n224:           0.486   0.268148  1.768295 1.4826         1  0.902500\n\n\n\n\n\n\n\n\nNoteLearning more about the output of score()\n\n\n\n\n\nSee the documentation for get_metrics.forecast_sample() for information on the default metrics for forecasts that are represented as samples (in our case the samples generated by the stan model).\n\n\n\n\nAt a glance\nBefore we look in detail at the scores, we can use summarise_scores to get a quick overview of the scores. Don’t worry if you don’t understand all the scores yet, we will go some of them in more detail in the next section and you can find more information in the {scoringutils} documentation.\n\nsc_scores |&gt;\n  summarise_scores(by = \"model\")\n\n         model      bias      dss     crps overprediction underprediction\n        &lt;char&gt;     &lt;num&gt;    &lt;num&gt;    &lt;num&gt;          &lt;num&gt;           &lt;num&gt;\n1: Random walk 0.1920848 6.334789 13.39682       7.849152       0.9033304\n   dispersion log_score      mad ae_median  se_mean\n        &lt;num&gt;     &lt;num&gt;    &lt;num&gt;     &lt;num&gt;    &lt;num&gt;\n1:   4.644333  3.983189 19.29697  18.25893 1565.234\n\n\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nBefore we look in detail at the scores, what do you think the scores are telling you?\n\n\n\n\nContinuous ranked probability score\n\nWhat is the Continuous Ranked Probability Score (CRPS)?\nThe Continuous Ranked Probability Score (CRPS) is a proper scoring rule used to evaluate the accuracy of probabilistic forecasts. It is a generalization of the Mean Absolute Error (MAE) to probabilistic forecasts, where the forecast is a distribution rather than a single point estimate (i.e. like ours).\nThe CRPS can be thought about as the combination of two key aspects of forecasting: 1. The accuracy of the forecast in terms of how close the predicted values are to the observed value. 2. The confidence of the forecast in terms of the spread of the predicted values.\nBy balancing these two aspects, the CRPS provides a comprehensive measure of the quality of probabilistic forecasts.\n\n\n\n\n\n\nTipKey things to note about the CRPS\n\n\n\n\nSmall values are better\nWhen scoring absolute values (e.g. number of cases) it can be difficult to compare forecasts across scales (i.e., when case numbers are different, for example between locations or at different times).\n\n\n\n\n\n\n\n\n\nTipMathematical Definition (optional)\n\n\n\n\n\nFor distributions with a finite first moment (a mean exists and it is finite), the CRPS can be expressed as:\n\\[\nCRPS(D, y) = \\mathbb{E}_{X \\sim D}[|X - y|] - \\frac{1}{2} \\mathbb{E}_{X, X' \\sim D}[|X - X'|]\n\\]\nwhere \\(X\\) and \\(X'\\) are independent random variables sampled from the distribution \\(D\\). To calculate this we simply replace \\(X\\) and \\(X'\\) by samples from our posterior distribution and sum over all possible combinations.\nThis equation can be broke down into the two components:\n\nBreakdown of the Components\n\nExpected Absolute Error Between Forecast and Observation: \\(\\mathbb{E}_{X \\sim D}[|X - y|]\\) This term represents the average absolute difference between the values predicted by the forecasted distribution \\(D\\) and the actual observed value \\(y\\). It measures how far, on average, the forecasted values are from the observed value. A smaller value indicates that the forecasted distribution is closer to the observed value.\nExpected Absolute Error Between Two Forecasted Values: \\(\\frac{1}{2} \\mathbb{E}_{X, X' \\sim D}[|X - X'|]\\) This term represents the average absolute difference between two independent samples from the forecasted distribution \\(D\\). It measures the internal variability or spread of the forecasted distribution. A larger value indicates a wider spread of the forecasted values.\n\n\n\nInterpretation\n\nFirst Term (\\(\\mathbb{E}_{X \\sim D}[|X - y|]\\)): This term penalizes the forecast based on how far the predicted values are from the observed value. It ensures that the forecast is accurate in terms of proximity to the actual observation.\nSecond Term (\\(\\frac{1}{2} \\mathbb{E}_{X, X' \\sim D}[|X - X'|]\\)): This term accounts for the spread of the forecasted distribution. It penalizes forecasts that are too uncertain or have a wide spread. By subtracting this term, the CRPS rewards forecasts that are not only accurate but also confident (i.e., have a narrow spread).\n\n\n\n\n\nWhilst the CRPS is a very useful metric it can be difficult to interpret in isolation. It is often useful to compare the CRPS of different models or to compare the CRPS of the same model under different conditions. For example, lets compare the CRPS across different forecast horizons.\n\nsc_scores |&gt;\n  summarise_scores(by = \"horizon\") |&gt;\n  ggplot(aes(x = horizon, y = crps)) +\n  geom_point() +\n  labs(title = \"CRPS by daily forecast horizon\", \n       subtitle = \"Summarised across all forecasts\")\n\n\n\n\n\n\n\n\nand at different time points.\n\nsc_scores |&gt;\n  summarise_scores(by = \"origin_day\") |&gt;\n  ggplot(aes(x = origin_day, y = crps)) +\n  geom_point() +\n  labs(title = \"CRPS by forecast start date\", \n       subtitle = \"Summarised across all forecasts\", x = \"forecast date\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 5 minutes\n\n\n\nHow do the CRPS scores change based on forecast date? How do the CRPS scores change with forecast horizon? What does this tell you about the model?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\n\nThe CRPS scores increase for forecast dates where incidence is higher.\nThe CRPS scores increase with forecast horizon.\nAs the CRPS is an absolute measure it is hard to immediately know if the CRPS increasing with forecast date indicates that the model is performing worse.\nHowever, the CRPS increasing with forecast horizon is a sign that the model is struggling to capture the longer term dynamics of the epidemic.\n\n\n\n\n\n\n\nPIT histograms\nAs well as the CRPS we can also look at the calibration and bias of the model. Calibration is the agreement between the forecast probabilities and the observed frequencies. Bias is a measure of how likely the model is to over or under predict the observed values.\nThere are many ways to assess calibration and bias but one common way is to use a probability integral transform (PIT) histogram. This is a histogram of the cumulative distribution of function of a forecast evaluated at the observed value.\n\n\n\n\n\n\nTipInterpreting the PIT histogram\n\n\n\n\nIdeally PIT histograms should be uniform.\nIf is a U shape then the model is overconfident and if it is an inverted U shape then the model is underconfident.\nIf it is skewed then the model is biased towards the direction of the skew.\n\n\n\n\n\n\n\n\n\nTipMathematical Definition (optional)\n\n\n\n\n\nContinuous Case\nFor a continuous random variable \\(X\\) with cumulative distribution function (CDF) \\(F_X\\), the PIT is defined as:\n\\[\nY = F_X(X)\n\\]\nwhere \\(Y\\) is uniformly distributed on \\([0, 1]\\).\n\nInteger Case\nWhen dealing with integer forecasts, the standard PIT does not yield a uniform distribution even if the forecasts are perfectly calibrated. To address this, a randomized version of the PIT can be used (Czado, Gneiting, and Held 2009). For an integer-valued random variable \\(X\\) with CDF \\(F_X\\), the randomized PIT is defined as:\n\\[\nU = F_X(k) + v \\cdot (F_X(k) - F_X(k-1))\n\\]\nwhere:\n\n\\(k\\) is the observed integer value.\n\\(F_X(k)\\) is the CDF evaluated at \\(k\\).\n\\(v\\) is a random variable uniformly distributed on \\([0, 1]\\).\n\nThis transformation ensures that \\(U\\) is uniformly distributed on \\([0, 1]\\) if the forecasted distribution \\(F_X\\) is correctly specified.\n\n\n\n\nLet’s first look at the overall PIT histogram.\n\nsc_forecasts |&gt;\n  get_pit_histogram() |&gt;\n  ggplot(aes(x = mid, y = density)) +\n  geom_col() +\n  labs(title = \"PIT histogram\", x = \"Quantile\", y = \"Density\")\n\n\n\n\n\n\n\n\nAs before lets look at the PIT histogram by forecast horizon. To save space we will group horizons into a few days each:\n\nsc_forecasts |&gt;\n  mutate(group_horizon = case_when(\n    horizon &lt;= 3 ~ \"1-3\",\n    horizon &lt;= 7 ~ \"4-7\",\n    horizon &lt;= 14 ~ \"8-14\"\n  )) |&gt;\n  get_pit_histogram(by = \"group_horizon\") |&gt;\n  ggplot(aes(x = mid, y = density)) +\n  geom_col() + \n  facet_wrap(~group_horizon) +\n  labs(title = \"PIT by forecast horizon (days)\")\n\n\n\n\n\n\n\n\nand then for different forecast dates.\n\nsc_forecasts |&gt;\n  get_pit_histogram(by = \"origin_day\") |&gt;\n  ggplot(aes(x = mid, y = density)) +\n  geom_col() + \n  facet_wrap(~origin_day) +\n  labs(title = \"PIT by forecast date\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 5 minutes\n\n\n\nWhat do you think of the PIT histograms? Do they look well calibrated? Do they look biased?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\n\nIt looks like the model is biased towards overpredicting and that this bias gets worse at longer forecast horizons.\nLooking over forecast dates it looks like much of this bias is coming from near the outbreak peak where the model is consistently overpredicting but the model is also over predicting at other times.",
+    "crumbs": [
+      "Forecast evaluation"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation.html#scoring-on-the-log-scale",
+    "href": "sessions/forecast-evaluation.html#scoring-on-the-log-scale",
+    "title": "Forecast evaluation",
+    "section": "Scoring on the log scale",
+    "text": "Scoring on the log scale\nWe can also score on the logarithmic scale. This can be useful if we are interested in the relative performance of the model at different scales of the data, for example if we are interested in the model’s performance at capturing the exponential growth phase of the epidemic. In some sense scoring in this way can be an approximation of scoring the effective reproduction number estimates. Doing this directly can be difficult as the effective reproduction number is a latent variable and so we cannot directly score it.\nWe again use scoringutils but first transform both the forecasts and observations to the log scale.\n\nlog_sc_forecasts &lt;- sc_forecasts |&gt;\n  transform_forecasts(\n    fun = log_shift,\n    offset = 1,\n    append = FALSE\n  )\n\nlog_scores &lt;- log_sc_forecasts |&gt;\n  score()\n\nFor more on scoring on the log scale see the paper by Bosse et al. (2023).\n\nAt a glance\n\nlog_scores |&gt;\n  summarise_scores(by = \"model\")\n\n         model      bias        dss      crps overprediction underprediction\n        &lt;char&gt;     &lt;num&gt;      &lt;num&gt;     &lt;num&gt;          &lt;num&gt;           &lt;num&gt;\n1: Random walk 0.1563393 -0.6213924 0.2504906      0.1199821      0.03919216\n   dispersion log_score       mad ae_median   se_mean\n        &lt;num&gt;     &lt;num&gt;     &lt;num&gt;     &lt;num&gt;     &lt;num&gt;\n1: 0.09131641 0.5628928 0.3940836 0.3481466 0.2153102\n\n\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nBefore we look in detail at the scores, what do you think the scores are telling you? How do you think they will differ from the scores on the natural scale?\n\n\n\n\nCRPS\n\nlog_scores |&gt;\n  summarise_scores(by = \"horizon\") |&gt;\n  ggplot(aes(x = horizon, y = crps)) +\n  geom_point() +\n  labs(title = \"CRPS by daily forecast horizon, scored on the log scale\")\n\n\n\n\n\n\n\n\nand across different forecast dates\n\nlog_scores |&gt;\n  summarise_scores(by = \"origin_day\") |&gt;\n  ggplot(aes(x = origin_day, y = crps)) +\n  geom_point() +\n  labs(title = \"CRPS by forecast date, scored on the log scale\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 5 minutes\n\n\n\nHow do the CRPS scores change based on forecast date? How do the CRPS scores change with forecast horizon? What does this tell you about the model?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\n\nAs for the natural scale CRPS scores increase with forecast horizon but now the increase appears to be linear vs exponential.\nThere has been a reduction in the CRPS scores for forecast dates near the outbreak peak compared to other forecast dates but this is still the period where the model is performing worst.",
+    "crumbs": [
+      "Forecast evaluation"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html",
+    "href": "sessions/forecast-ensembles.html",
+    "title": "Forecast ensembles",
+    "section": "",
+    "text": "As we saw in the forecast evaluation session, different modelling approaches have different strength and weaknesses, and it is not clear a priori which one produces the best forecast in any given situation. One way to attempt to draw strength from a diversity of approaches is the creation of so-called forecast ensembles from the forecasts produced by different models.\nIn this session, we’ll build ensembles using forecasts from models of different levels of mechanism vs. statistical complexity. We will then compare the performance of these ensembles to the individual models and to each other. Rather than using the forecast samples we have been using we will instead now use quantile-based forecasts.\n\n\n\n\n\n\nNoteRepresentations of probabilistic forecasts\n\n\n\n\n\nProbabilistic predictions can be described as coming from a probabilistic probability distributions. In general and when using complex models such as the one we discuss in this course, these distributions can not be expressed in a simple analytical formal as we can do if, e.g. talking about common probability distributions such as the normal or gamma distributions. Instead, we typically use a limited number of samples generated from Monte-Carlo methods to represent the predictive distribution. However, this is not the only way to characterise distributions.\nA quantile is the value that corresponds to a given quantile level of a distribution. For example, the median is the 50th quantile of a distribution, meaning that 50% of the values in the distribution are less than the median and 50% are greater. Similarly, the 90th quantile is the value that corresponds to 90% of the distribution being less than this value. If we characterise a predictive distribution by its quantiles, we specify these values at a range of specific quantile levels, e.g. from 5% to 95% in 5% steps.\nDeciding how to represent forecasts depends on many things, for example the method used (and whether it produces samples by default) but also logistic considerations. Many collaborative forecasting projects and so-called forecasting hubs use quantile-based representations of forecasts in the hope to be able to characterise both the centre and tails of the distributions more reliably and with less demand on storage space than a sample-based representation.\n\n\n\n\n\n\nIntroduction to ensembles\n\n\n\n\nThe aim of this session is to introduce the concept of ensembles of forecasts and to evaluate the performance of ensembles of the multiple models.\n\n\n\n\n\n\nNoteSetup\n\n\n\n\n\n\n\nThe source file of this session is located at sessions/forecast-ensembles.qmd.\n\n\n\nIn this session we will use the nfidd package to load a data set of infection times and access stan models and helper functions, the dplyr and tidyr packages for data wrangling, ggplot2 library for plotting, the tidybayes package for extracting results of the inference and the scoringutils package for evaluating forecasts. We will also use qrensemble for quantile regression averaging in the weighted ensemble section.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"tidyr\")\nlibrary(\"ggplot2\")\nlibrary(\"scoringutils\")\nlibrary(\"qrensemble\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.\n\n\n\n\n\nWe set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#slides",
+    "href": "sessions/forecast-ensembles.html#slides",
+    "title": "Forecast ensembles",
+    "section": "",
+    "text": "Introduction to ensembles",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#objectives",
+    "href": "sessions/forecast-ensembles.html#objectives",
+    "title": "Forecast ensembles",
+    "section": "",
+    "text": "The aim of this session is to introduce the concept of ensembles of forecasts and to evaluate the performance of ensembles of the multiple models.\n\n\n\n\n\n\nNoteSetup\n\n\n\n\n\n\n\nThe source file of this session is located at sessions/forecast-ensembles.qmd.\n\n\n\nIn this session we will use the nfidd package to load a data set of infection times and access stan models and helper functions, the dplyr and tidyr packages for data wrangling, ggplot2 library for plotting, the tidybayes package for extracting results of the inference and the scoringutils package for evaluating forecasts. We will also use qrensemble for quantile regression averaging in the weighted ensemble section.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"tidyr\")\nlibrary(\"ggplot2\")\nlibrary(\"scoringutils\")\nlibrary(\"qrensemble\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.\n\n\n\n\n\nWe set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#source-file",
+    "href": "sessions/forecast-ensembles.html#source-file",
+    "title": "Forecast ensembles",
+    "section": "",
+    "text": "The source file of this session is located at sessions/forecast-ensembles.qmd.",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#libraries-used",
+    "href": "sessions/forecast-ensembles.html#libraries-used",
+    "title": "Forecast ensembles",
+    "section": "",
+    "text": "In this session we will use the nfidd package to load a data set of infection times and access stan models and helper functions, the dplyr and tidyr packages for data wrangling, ggplot2 library for plotting, the tidybayes package for extracting results of the inference and the scoringutils package for evaluating forecasts. We will also use qrensemble for quantile regression averaging in the weighted ensemble section.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"tidyr\")\nlibrary(\"ggplot2\")\nlibrary(\"scoringutils\")\nlibrary(\"qrensemble\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#initialisation",
+    "href": "sessions/forecast-ensembles.html#initialisation",
+    "title": "Forecast ensembles",
+    "section": "",
+    "text": "We set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#construction",
+    "href": "sessions/forecast-ensembles.html#construction",
+    "title": "Forecast ensembles",
+    "section": "Construction",
+    "text": "Construction\nWe can calculate the mean ensemble by taking the mean of the forecasts at each quantile level.\n\nmean_ensemble &lt;- quantile_forecasts |&gt;\n  as_tibble() |&gt;\n  summarise(\n    predicted = mean(predicted),\n    observed = unique(observed),\n    model = \"Mean ensemble\",\n    .by = c(origin_day, horizon, quantile_level, day)\n  )\n\nSimilarly, we can calculate the median ensemble by taking the median of the forecasts at each quantile level.\n\nmedian_ensemble &lt;- quantile_forecasts |&gt;\n  as_tibble() |&gt;\n  summarise(\n    predicted = median(predicted),\n    observed = unique(observed),\n    model = \"Median ensemble\",\n    .by = c(origin_day, horizon, quantile_level, day)\n  )\n\nWe combine the ensembles into a single data frame along with the individual forecasts in order to make visualisation easier.\n\nsimple_ensembles &lt;- bind_rows(\n  mean_ensemble,\n  median_ensemble,\n  quantile_forecasts\n)",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#visualisation",
+    "href": "sessions/forecast-ensembles.html#visualisation",
+    "title": "Forecast ensembles",
+    "section": "Visualisation",
+    "text": "Visualisation\nHow do these ensembles visually differ from the individual models? Lets start by plotting a single forecast from each model and comparing them.\n\nplot_ensembles &lt;- function(data, obs_data) {\n  data |&gt;\n    pivot_wider(names_from = quantile_level, values_from = predicted) |&gt;\n    ggplot(aes(x = day)) +\n    geom_ribbon(\n    aes(\n      ymin = .data[[\"0.05\"]], ymax = .data[[\"0.95\"]], fill = model,\n        group = origin_day\n      ),\n      alpha = 0.2\n    ) +\n    geom_ribbon(\n      aes(\n        ymin = .data[[\"0.25\"]], ymax = .data[[\"0.75\"]], fill = model,\n        group = origin_day\n      ),\n      alpha = 0.5\n    ) +\n    geom_point(\n      data = obs_data,\n      aes(x = day, y = onsets), color = \"black\"\n    ) +\n    scale_color_binned(type = \"viridis\") +\n    facet_wrap(~model) +\n    theme(legend.position = \"none\")\n}\n\nplot_single_forecasts &lt;- simple_ensembles |&gt;\n  filter(origin_day == 57) |&gt;\n  plot_ensembles(onset_df |&gt; filter(day &gt;= 57, day &lt;= 57 + 14))\n\nplot_single_forecasts\n\n\n\n\n\n\n\n\nAgain we can get a different perspective by plotting the forecasts on the log scale.\n\nplot_single_forecasts +\n  scale_y_log10()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nHow do these ensembles compare to the individual models? How do they differ from each other?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\nHow do these ensembles compare to the individual models?\n\nBoth of the simple ensembles appear to be less variable than the statistical models but are more variable than the mechanistic model.\nBoth ensembles are more like the statistical models than the mechanistic model.\n\nHow do they differ from each other?\n\nThe mean ensemble has slightly tighter uncertainty bounds than the median ensemble.\n\n\n\n\nNow lets plot a range of forecasts from each model and ensemble.\n\nplot_multiple_forecasts &lt;- simple_ensembles |&gt;\n  plot_ensembles(onset_df |&gt; filter(day &gt;= 21)) +\n  lims(y = c(0, 400))\n\nplot_multiple_forecasts\n\nWarning: Removed 17 rows containing missing values or values outside the scale range\n(`geom_ribbon()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_ribbon()`).\n\n\n\n\n\n\n\n\n\nAgain we can get a different perspective by plotting the forecasts on the log scale.\n\nplot_multiple_forecasts +\n  scale_y_log10()\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nWarning in scale_y_log10(): log-10 transformation introduced infinite values.\nlog-10 transformation introduced infinite values.\nlog-10 transformation introduced infinite values.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nHow do these ensembles compare to the individual models?\nHow do they differ from each other?\nAre there any differences across forecast dates?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\nHow do these ensembles compare to the individual models?\n\nAs before, the ensembles appear to be less variable than the statistical models but more variable than the mechanistic model.\n\nHow do they differ from each other?\n\nThe mean ensemble has marginally tighter uncertainty bounds than the median ensemble as for the single forecast.\n\nAre there any differences across forecast dates?\n\nThe mean ensemble appears to be more variable across forecast dates than the median ensemble with this being more pronounced after the peak of the outbreak.",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#evaluation",
+    "href": "sessions/forecast-ensembles.html#evaluation",
+    "title": "Forecast ensembles",
+    "section": "Evaluation",
+    "text": "Evaluation\nAs in the forecast evaluation session, we can evaluate the accuracy of the ensembles using the {scoringutils} package and in particular the score() function.\n\nensemble_scores &lt;- simple_ensembles |&gt;\n  as_forecast_quantile(forecast_unit = c(\"origin_day\", \"horizon\", \"model\")) |&gt;\n  score()\n\n\n\n\n\n\n\nNote\n\n\n\nThe weighted interval score (WIS) is a proper scoring rule for quantile forecasts that approximates the Continuous Ranked Probability Score (CRPS) by considering a weighted sum of multiple prediction intervals. As the number of intervals increases, the WIS converges to the CRPS, combining sharpness and penalties for over- and under-prediction.\nWe see it here as we are scoring quantiles and not samples hence we cannot use CRPS as we did before.\n\n\nAgain we start with a high level overview of the scores by model.\n\nensemble_scores |&gt;\n  summarise_scores(by = c(\"model\"))\n\n              model       wis overprediction underprediction dispersion\n             &lt;char&gt;     &lt;num&gt;          &lt;num&gt;           &lt;num&gt;      &lt;num&gt;\n1:    Mean ensemble  8.368094       4.053482       1.1252976   3.189314\n2:  Median ensemble 10.408312       5.707768       1.2781250   3.422420\n3:      Random walk 11.942152       7.041786       0.8459821   4.054384\n4: More statistical 11.036451       5.458304       1.7772321   3.800915\n5: More mechanistic  5.647196       1.664643       2.2699107   1.712643\n          bias interval_coverage_50 interval_coverage_90 ae_median\n         &lt;num&gt;                &lt;num&gt;                &lt;num&gt;     &lt;num&gt;\n1:  0.18348214            0.5089286            0.8750000  12.80208\n2:  0.13883929            0.5178571            0.8660714  15.92857\n3:  0.20133929            0.5133929            0.8616071  18.25893\n4: -0.02857143            0.5000000            0.8526786  16.83482\n5:  0.21741071            0.4598214            0.7633929   8.75000\n\n\n\n\n\n\n\n\nTipTake 5 minutes\n\n\n\nWhat do you think the scores are telling you? Which model do you think is best? What other scoring breakdowns might you want to look at?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\nWhat do you think the scores are telling you? Which model do you think is best?\n\nThe mean ensemble appears to be the best performing ensemble model overall.\nHowever, the more mechanistic model appears to be the best performing model overall.\n\nWhat other scoring breakdowns might you want to look at?\n\nThere might be variation over forecast dates or horizons between the different ensemble methods",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#construction-1",
+    "href": "sessions/forecast-ensembles.html#construction-1",
+    "title": "Forecast ensembles",
+    "section": "Construction",
+    "text": "Construction\nAs we just saw, the random walk model (our original baseline model) is performing poorly in comparison to the other models. We can remove this model from the ensemble and see if this improves the performance of the ensemble.\n\n\n\n\n\n\nWarningWarning\n\n\n\nHere we are technically cheating a little as we are using the test data to help select the models to include in the ensemble. In the real world you would not do this as you would not have access to the test data and so this is an idealised scenario.\n\n\n\nfiltered_models &lt;- quantile_forecasts |&gt;\n  filter(model != \"Random walk\")\n\nWe then need to recalculate the ensembles. First the mean ensemble,\n\nfiltered_mean_ensembles &lt;- filtered_models |&gt;\n  as_tibble() |&gt;\n  summarise(\n    predicted = mean(predicted),\n    observed = unique(observed),\n    model = \"Mean filtered ensemble\",\n    .by = c(origin_day, horizon, quantile_level, day)\n  )\n\nand then the median ensemble.\n\nfiltered_median_ensembles &lt;- filtered_models |&gt;\n  as_tibble() |&gt;\n  summarise(\n    predicted = median(predicted),\n    observed = unique(observed),\n    model = \"Median filtered ensemble\",\n    .by = c(origin_day, horizon, quantile_level, day)\n  )\n\nWe combine these new ensembles with our previous ensembles in order to make visualisation easier.\n\nfiltered_ensembles &lt;- bind_rows(\n  filtered_mean_ensembles,\n  filtered_median_ensembles,\n  simple_ensembles\n)",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#visualisation-1",
+    "href": "sessions/forecast-ensembles.html#visualisation-1",
+    "title": "Forecast ensembles",
+    "section": "Visualisation",
+    "text": "Visualisation\nAs for the simple ensembles, we can plot a single forecast from each model and ensemble.\n\nfiltered_ensembles |&gt;\n  filter(origin_day == 57) |&gt;\n  plot_ensembles(onset_df |&gt; filter(day &gt;= 57, day &lt;= 57 + 14))\n\n\n\n\n\n\n\n\nand on the log scale.\n\nfiltered_ensembles |&gt;\n  filter(origin_day == 57) |&gt;\n  plot_ensembles(onset_df |&gt; filter(day &gt;= 57, day &lt;= 57 + 14)) +\n  scale_y_log10()\n\n\n\n\n\n\n\n\nTo get an overview we also plot a range of forecasts from each model and ensemble.\n\nplot_multiple_filtered_forecasts &lt;- filtered_ensembles |&gt;\n  plot_ensembles(onset_df |&gt; filter(day &gt;= 21)) +\n  lims(y = c(0, 400))\nplot_multiple_filtered_forecasts\n\nWarning: Removed 17 rows containing missing values or values outside the scale range\n(`geom_ribbon()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_ribbon()`).\n\n\n\n\n\n\n\n\n\nand on the log scale.\n\nplot_multiple_filtered_forecasts +\n  scale_y_log10()\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nWarning in scale_y_log10(): log-10 transformation introduced infinite values.\nlog-10 transformation introduced infinite values.\nlog-10 transformation introduced infinite values.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nHow do the filtered ensembles compare to the simple ensembles? Which do you think is best?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\nHow do the filtered ensembles compare to the simple ensembles?\n\nThe filtered ensembles appear to be less variable than the simple ensembles.\nThe filtered ensembles appear to be more like the mechanistic model than the simple ensembles.\n\nWhich do you think is best?\n\nVisually, the filtered ensembles appear very similar. This makes sense given we know there are only two models left in the ensemble.",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#evaluation-1",
+    "href": "sessions/forecast-ensembles.html#evaluation-1",
+    "title": "Forecast ensembles",
+    "section": "Evaluation",
+    "text": "Evaluation\nLet us score the filtered ensembles.\n\nfiltered_ensemble_scores &lt;- filtered_ensembles |&gt;\n  as_forecast_quantile(\n    forecast_unit = c(\n      \"origin_day\", \"horizon\", \"model\"\n    )\n  ) |&gt;\n  score()\n\nAgain we can get a high level overview of the scores by model.\n\nfiltered_ensemble_scores |&gt;\n  summarise_scores(by = c(\"model\"))\n\n                      model       wis overprediction underprediction dispersion\n                     &lt;char&gt;     &lt;num&gt;          &lt;num&gt;           &lt;num&gt;      &lt;num&gt;\n1:   Mean filtered ensemble  7.001690       2.785045       1.4598661   2.756779\n2: Median filtered ensemble  7.001690       2.785045       1.4598661   2.756779\n3:            Mean ensemble  8.368094       4.053482       1.1252976   3.189314\n4:          Median ensemble 10.408312       5.707768       1.2781250   3.422420\n5:              Random walk 11.942152       7.041786       0.8459821   4.054384\n6:         More statistical 11.036451       5.458304       1.7772321   3.800915\n7:         More mechanistic  5.647196       1.664643       2.2699107   1.712643\n          bias interval_coverage_50 interval_coverage_90 ae_median\n         &lt;num&gt;                &lt;num&gt;                &lt;num&gt;     &lt;num&gt;\n1:  0.13482143            0.5089286            0.8705357  10.76562\n2:  0.13482143            0.5089286            0.8705357  10.76562\n3:  0.18348214            0.5089286            0.8750000  12.80208\n4:  0.13883929            0.5178571            0.8660714  15.92857\n5:  0.20133929            0.5133929            0.8616071  18.25893\n6: -0.02857143            0.5000000            0.8526786  16.83482\n7:  0.21741071            0.4598214            0.7633929   8.75000\n\n\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nHow do the filtered ensembles compare to the simple ensembles?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\nHow do the filtered ensembles compare to the simple ensembles?\n\nThe filtered ensembles appear to be more accurate than the simple ensembles.\nAs you would expect they are an average of the more mechanistic model and the more statistical model.\nAs there are only two models in the ensemble, the median and mean ensembles are identical.\nFor the first time there are features of the ensemble that outperform the more mechanistic model though it remains the best performing model overall.",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#construction-2",
+    "href": "sessions/forecast-ensembles.html#construction-2",
+    "title": "Forecast ensembles",
+    "section": "Construction",
+    "text": "Construction\n\nInverse WIS weighting\nIn order to perform inverse WIS weighting we first need to calculate the WIS for each model. We already have this from the previous evaluation so we can reuse this.\n\nweights_per_model &lt;- ensemble_scores |&gt;\n  dplyr::filter(\n    model %in% c(\"More mechanistic\", \"More statistical\", \"Random walk\")\n  ) |&gt;\n  summarise_scores(by = c(\"model\", \"origin_day\")) |&gt;\n  select(model, origin_day, wis) |&gt;\n  mutate(inv_wis = 1 / wis) |&gt;\n  mutate(\n    inv_wis_total_by_date = sum(inv_wis), .by = origin_day\n  ) |&gt;\n  mutate(weights = inv_wis / inv_wis_total_by_date)\n\nweights_per_model |&gt;\n  select(model, origin_day, weights) |&gt;\n  pivot_wider(names_from = model, values_from = weights)\n\n# A tibble: 16 × 4\n   origin_day `Random walk` `More statistical` `More mechanistic`\n        &lt;dbl&gt;         &lt;dbl&gt;              &lt;dbl&gt;              &lt;dbl&gt;\n 1         22        0.325              0.412               0.262\n 2         29        0.428              0.332               0.240\n 3         36        0.375              0.302               0.323\n 4         43        0.320              0.249               0.431\n 5         50        0.281              0.236               0.484\n 6         57        0.276              0.257               0.467\n 7         64        0.254              0.257               0.489\n 8         71        0.433              0.287               0.279\n 9         78        0.244              0.328               0.428\n10         85        0.0660             0.0749              0.859\n11         92        0.228              0.280               0.492\n12         99        0.205              0.308               0.486\n13        106        0.150              0.173               0.677\n14        113        0.316              0.479               0.205\n15        120        0.437              0.385               0.178\n16        127        0.316              0.257               0.428\n\n\nNow lets apply the weights to the forecast models. As we can only use information that was available at the time of the forecast to perform the weighting, we use weights from two weeks prior to the forecast date to inform each ensemble.\n\ninverse_wis_ensemble &lt;- quantile_forecasts |&gt;\n  as_tibble() |&gt;\n  left_join(\n    weights_per_model |&gt;\n      mutate(origin_day = origin_day + 14),\n    by = c(\"model\", \"origin_day\")\n  ) |&gt;\n  # assign equal weights if no weights are available\n  mutate(weights = ifelse(is.na(weights), 1/3, weights)) |&gt;\n  summarise(\n    predicted = sum(predicted * weights),\n    observed = unique(observed),\n    model = \"Inverse WIS ensemble\",\n    .by = c(origin_day, horizon, quantile_level, day)\n  )\n\n\n\nQuantile regression averaging\nWe futher to perform quantile regression averaging (QRA) for each forecast date. Again we need to consider how many previous forecasts we wish to use to inform each ensemble forecast. Here we decide to use up to 3 weeks of previous forecasts to inform each QRA ensemble.\n\nforecast_dates &lt;- quantile_forecasts |&gt;\n  as_tibble() |&gt;\n  pull(origin_day) |&gt;\n  unique()\n\nqra_by_forecast &lt;- function(\n  quantile_forecasts,\n  forecast_dates,\n  group = c(\"target_end_date\"), \n  ...\n) {\n  lapply(forecast_dates, \\(x) {\n    quantile_forecasts |&gt;\n      mutate(target_end_date = x) |&gt;\n      dplyr::filter(origin_day &lt;= x) |&gt;\n      dplyr::filter(origin_day &gt;= x - (3 * 7 + 1)) |&gt;\n      dplyr::filter(origin_day == x | day &lt;= x) |&gt;\n      qra(\n        group = group,\n        target = c(origin_day = x),\n        ...\n      )\n  })\n}\n\nqra_ensembles_obj &lt;- qra_by_forecast(\n  quantile_forecasts,\n  forecast_dates[-1],\n  group = c(\"target_end_date\")\n)\n\nqra_weights &lt;- seq_along(qra_ensembles_obj) |&gt;\n  lapply(\\(i) attr(qra_ensembles_obj[[i]], \"weights\") |&gt;\n    mutate(origin_day = forecast_dates[i + 1])\n  ) |&gt;\n  bind_rows() |&gt;\n  dplyr::filter(quantile == 0.5)\n\nqra_ensembles &lt;- qra_ensembles_obj |&gt;\n  bind_rows()\n\nInstead of creating a single optimised ensemble and using this for all forecast horizons we might also want to consider a separate optimised QRA ensemble for each forecast horizon, reflecting that models might perform differently depending on how far ahead a forecast is produced. We can do this using qra() with the group argument.\n\nqra_ensembles_by_horizon &lt;- qra_by_forecast(\n  quantile_forecasts,\n  forecast_dates[-c(1:2)],\n  group = c(\"horizon\", \"target_end_date\"),\n  model = \"QRA by horizon\"\n)\n\nqra_weights_by_horizon &lt;- seq_along(qra_ensembles_by_horizon) |&gt;\n  lapply(\\(i) attr(qra_ensembles_by_horizon[[i]], \"weights\") |&gt;\n    mutate(origin_day = forecast_dates[i + 2])\n  ) |&gt;\n  bind_rows()\n\n\n\nCombine ensembles\n\nweighted_ensembles &lt;- bind_rows(\n  inverse_wis_ensemble,\n  qra_ensembles,\n  qra_ensembles_by_horizon,\n  filtered_ensembles\n) |&gt;\n  # remove the repeated filtered ensemble\n  filter(model != \"Mean filtered ensemble\")",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#visualisation-2",
+    "href": "sessions/forecast-ensembles.html#visualisation-2",
+    "title": "Forecast ensembles",
+    "section": "Visualisation",
+    "text": "Visualisation\n\nSingle forecasts\nAgain we start by plotting a single forecast from each model and ensemble.\n\nweighted_ensembles |&gt;\n  filter(origin_day == 57) |&gt;\n  plot_ensembles(onset_df |&gt; filter(day &gt;= 57, day &lt;= 57 + 14))\n\n\n\n\n\n\n\n\nand on the log scale.\n\nweighted_ensembles |&gt;\n  filter(origin_day == 57) |&gt;\n  plot_ensembles(onset_df |&gt; filter(day &gt;= 57, day &lt;= 57 + 14)) +\n  scale_y_log10()\n\n\n\n\n\n\n\n\n\n\nMultiple forecasts\nAs before we can plot a range of forecasts from each model and ensemble.\n\nplot_multiple_weighted_forecasts &lt;- weighted_ensembles |&gt;\n  plot_ensembles(onset_df |&gt; filter(day &gt;= 21)) +\n  lims(y = c(0, 400))\nplot_multiple_weighted_forecasts\n\nWarning: Removed 18 rows containing missing values or values outside the scale range\n(`geom_ribbon()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_ribbon()`).\n\n\n\n\n\n\n\n\n\nand on the log scale.\n\nplot_multiple_weighted_forecasts +\n  scale_y_log10()\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nWarning in scale_y_log10(): log-10 transformation introduced infinite values.\nlog-10 transformation introduced infinite values.\nlog-10 transformation introduced infinite values.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nHow do the weighted ensembles compare to the simple ensembles? Which do you think is best? Are you surprised by the results? Can you think of any reasons that would explain them?\n\n\n\n\nModels weights\nNow that we have a weighted ensemble, we can also look at the weights of the individual models. Here we do this for the quantile regression averaging ensemble but we could also do this for the inverse WIS ensemble or any other weighted ensemble (for an unweighted ensemble the weights are all equal).\n\nqra_weights |&gt;\n  ggplot(aes(x = origin_day, y = weight, fill = model)) +\n  geom_col(position = \"stack\") +\n  theme(legend.position = \"bottom\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nHow do the weights change over time? Are you surprised by the results given what you know about the models performance?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\nHow do the weights change over time?\n\nEarly on the more statistical models have higher weights\nGradually the random walk model gains weight and by the end of the forecast horizon it represents the entire ensemble.\nNear the peak the mechanistic model also gains weight.\n\nAre you surprised by the results given what you know about the models performance?\n\nAs the random walk model is performing poorly, you would expect it to have low weights but actually it often doesn’t. This implies that its poor performance is restricted to certain parts of the outbreak.\nEven though the mechanistic model performs really well overall it is only included in the ensemble around the peak. This could be because the training data doesn’t include changes in the epidemic dynamics and so the mechanistic model is not given sufficient weight.",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-ensembles.html#evaluation-2",
+    "href": "sessions/forecast-ensembles.html#evaluation-2",
+    "title": "Forecast ensembles",
+    "section": "Evaluation",
+    "text": "Evaluation\nFor a final evaluation we can look at the scores for each model and ensemble again. We remove the two weeks of forecasts as these do not have a quantile regression average forecasts as these require training data to estimate.\n\nweighted_ensemble_scores &lt;- weighted_ensembles |&gt;\n  filter(origin_day &gt;= 29) |&gt;\n  as_forecast_quantile(forecast_unit = c(\"origin_day\", \"horizon\", \"model\")) |&gt;\n  score()\n\nAgain we can get a high level overview of the scores by model.\n\nweighted_ensemble_scores |&gt;\n  summarise_scores(by = c(\"model\"))\n\n                         model       wis overprediction underprediction\n                        &lt;char&gt;     &lt;num&gt;          &lt;num&gt;           &lt;num&gt;\n1:        Inverse WIS ensemble  8.452858       4.078468       1.3139919\n2: Quantile Regression Average  7.438817       2.930858       2.1179392\n3:              QRA by horizon  8.006609       3.222753       2.2214614\n4:    Median filtered ensemble  7.255293       2.848571       1.5567143\n5:               Mean ensemble  8.709146       4.197524       1.1996825\n6:             Median ensemble 10.878952       5.954000       1.3623810\n7:                 Random walk 12.514186       7.376952       0.9014286\n8:            More statistical 11.595419       5.756476       1.8947619\n9:            More mechanistic  5.745548       1.568476       2.4212381\n   dispersion        bias interval_coverage_50 interval_coverage_90 ae_median\n        &lt;num&gt;       &lt;num&gt;                &lt;num&gt;                &lt;num&gt;     &lt;num&gt;\n1:   3.060398  0.13714286            0.5095238            0.8238095  12.83756\n2:   2.390020  0.07571429            0.4809524            0.7857143  11.43652\n3:   2.562395  0.12193878            0.4642857            0.7908163  12.21552\n4:   2.850007  0.09380952            0.5285714            0.8666667  11.12143\n5:   3.311940  0.14571429            0.5285714            0.8714286  13.28413\n6:   3.562571  0.10047619            0.5380952            0.8619048  16.60000\n7:   4.235805  0.16714286            0.5333333            0.8571429  19.08571\n8:   3.944181 -0.06809524            0.4952381            0.8428571  17.69048\n9:   1.755833  0.17571429            0.4809524            0.7714286   8.87619\n\n\nRemembering the session on forecast evaluation, we should also check performance on the log scale.\n\nlog_ensemble_scores &lt;- weighted_ensembles |&gt;\n  filter(origin_day &gt;= 29) |&gt;\n  as_forecast_quantile(forecast_unit = c(\"origin_day\", \"horizon\", \"model\")) |&gt;\n    transform_forecasts(\n    fun = log_shift,\n    offset = 1,\n    append = FALSE\n  ) |&gt;\n  score()\n\nlog_ensemble_scores |&gt;\n  summarise_scores(by = c(\"model\"))\n\n                         model       wis overprediction underprediction\n                        &lt;char&gt;     &lt;num&gt;          &lt;num&gt;           &lt;num&gt;\n1:        Inverse WIS ensemble 0.1742010     0.07881698      0.03377327\n2: Quantile Regression Average 0.1807427     0.08359583      0.03726745\n3:              QRA by horizon 0.1673600     0.08902760      0.02703905\n4:    Median filtered ensemble 0.1565710     0.06928781      0.02878697\n5:               Mean ensemble 0.1702717     0.07649681      0.02965817\n6:             Median ensemble 0.1930613     0.07919152      0.04153467\n7:                 Random walk 0.2059349     0.09204866      0.03774232\n8:            More statistical 0.2265978     0.06678145      0.07615982\n9:            More mechanistic 0.1612289     0.09838393      0.02188482\n   dispersion        bias interval_coverage_50 interval_coverage_90 ae_median\n        &lt;num&gt;       &lt;num&gt;                &lt;num&gt;                &lt;num&gt;     &lt;num&gt;\n1: 0.06161071  0.13714286            0.5095238            0.8238095 0.2670075\n2: 0.05987939  0.07809524            0.4809524            0.7857143 0.2719032\n3: 0.05129337  0.12448980            0.4744898            0.7908163 0.2469915\n4: 0.05849623  0.09380952            0.5285714            0.8666667 0.2397427\n5: 0.06411670  0.14571429            0.5285714            0.8714286 0.2602670\n6: 0.07233514  0.10047619            0.5380952            0.8619048 0.2978788\n7: 0.07614388  0.16714286            0.5333333            0.8571429 0.3172793\n8: 0.08365652 -0.06809524            0.4952381            0.8428571 0.3422939\n9: 0.04096012  0.17571429            0.4809524            0.7714286 0.2445859\n\n\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nHow do the weighted ensembles compare to the simple ensembles on the natural and log scale?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\nThe best ensembles slightly outperform some of the simple ensembles but there is no obvious benefit from using weighted ensembles. Why might this be the case?",
+    "crumbs": [
+      "Forecast ensembles"
+    ]
+  },
+  {
+    "objectID": "sessions.html",
+    "href": "sessions.html",
+    "title": "Sessions",
+    "section": "",
+    "text": "13:30-13:35\n\nIntroduction to the course and the instructors (5 mins)"
+  },
+  {
+    "objectID": "sessions.html#session-0-introduction-and-course-overview",
+    "href": "sessions.html#session-0-introduction-and-course-overview",
+    "title": "Sessions",
+    "section": "",
+    "text": "13:30-13:35\n\nIntroduction to the course and the instructors (5 mins)"
+  },
+  {
+    "objectID": "sessions.html#session-1-forecasting",
+    "href": "sessions.html#session-1-forecasting",
+    "title": "Sessions",
+    "section": "Session 1: Forecasting",
+    "text": "Session 1: Forecasting\n13:35-14:10\n\nIntroduction to forecasting as an epidemiological problem (10 mins)\nPractice session: Visualising infectious disease forecasts (25 minutes)"
+  },
+  {
+    "objectID": "sessions.html#session-2-forecast-evaluation",
+    "href": "sessions.html#session-2-forecast-evaluation",
+    "title": "Sessions",
+    "section": "Session 2: Forecast evaluation",
+    "text": "Session 2: Forecast evaluation\n14:10-15:00\n\nAn introduction to forecast evaluation (5 mins)\nPractice session: Evaluating forecasts from a range of models (40 mins)\nWrap up (5 mins)"
+  },
+  {
+    "objectID": "sessions.html#session-3-evaluating-forecasts-from-multiple-models",
+    "href": "sessions.html#session-3-evaluating-forecasts-from-multiple-models",
+    "title": "Sessions",
+    "section": "Session 3: Evaluating forecasts from multiple models",
+    "text": "Session 3: Evaluating forecasts from multiple models\n15:00-15:50\n\nWhy might we want to evaluate forecasts from multiple models? (5 mins)\nPractice session: Evaluating forecasts from multiple models (40 mins)\nWrap up (5 mins)\n\nThere is a coffee break at 15:30-15:40 you are welcome to attend this or keep working through the course material."
+  },
+  {
+    "objectID": "sessions.html#session-4-forecast-ensembles",
+    "href": "sessions.html#session-4-forecast-ensembles",
+    "title": "Sessions",
+    "section": "Session 4: Forecast ensembles",
+    "text": "Session 4: Forecast ensembles\n15:50-17:10\n\nIntroduction to forecast ensembles (10 mins)\nPractice session: Creating forecast ensembles (60 mins)\nWrap up (10 mins)"
+  },
+  {
+    "objectID": "sessions.html#session-5-end-of-course-summary",
+    "href": "sessions.html#session-5-end-of-course-summary",
+    "title": "Sessions",
+    "section": "Session 5: End of course summary",
+    "text": "Session 5: End of course summary\n17:10-17:30\n\nSummary of the course (10 mins)\nFinal discussion and closing (10 mins)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Understanding, evaluating, and improving forecasts of infectious disease burden",
+    "section": "",
+    "text": "This course is a shorter version of a course on Nowcasting and forecasting infectious disease dynamics.\nAll materials here are provided under the permissive MIT License."
+  },
+  {
+    "objectID": "getting-set-up.html",
+    "href": "getting-set-up.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Each session in this course uses R code for demonstration. All the content is self-contained within a R software package designed for the course and uses notebooks for each session.\nIf you would like to you can follow the course material without installing any software or running any code. However, if you would like to run the code yourself, you will need to follow the instructions below."
+  },
+  {
+    "objectID": "getting-set-up.html#installation-of-the-nfidd-package",
+    "href": "getting-set-up.html#installation-of-the-nfidd-package",
+    "title": "Overview",
+    "section": "Installation of the nfidd package",
+    "text": "Installation of the nfidd package\nTo install the packages needed in the course, including the nfidd package that contains data files and helper functions used throughout, you can use the pak package:\n\noptions(repos = c(\n  \"CRAN\" = \"https://cloud.r-project.org\",\n  \"stan-dev\" = \"https://stan-dev.r-universe.dev\",\n  \"epiforecasts\" = \"https://epiforecasts.r-universe.dev\"\n))\ninstall.packages(\"nfidd\", dependencies = TRUE)\n\nThen you can check that the installation completed successfully by loading the package into your R session:\n\nlibrary(\"nfidd\")"
+  },
+  {
+    "objectID": "help.html",
+    "href": "help.html",
+    "title": "Getting help",
+    "section": "",
+    "text": "For any questions about the course or its content, feel free to use the Discussion board"
+  },
+  {
+    "objectID": "learning_objectives.html",
+    "href": "learning_objectives.html",
+    "title": "Independent learning outcomes",
+    "section": "",
+    "text": "understanding of forecasting as an epidemiological problem\nunderstanding of ways to visualise forecasts"
+  },
+  {
+    "objectID": "learning_objectives.html#forecasting",
+    "href": "learning_objectives.html#forecasting",
+    "title": "Independent learning outcomes",
+    "section": "",
+    "text": "understanding of forecasting as an epidemiological problem\nunderstanding of ways to visualise forecasts"
+  },
+  {
+    "objectID": "learning_objectives.html#evaluating-forecasts",
+    "href": "learning_objectives.html#evaluating-forecasts",
+    "title": "Independent learning outcomes",
+    "section": "Evaluating forecasts",
+    "text": "Evaluating forecasts\n\nfamiliarity with metrics for evaluating probabilistic forecasts and their properties\nability to score probabilistic forecasts in R"
+  },
+  {
+    "objectID": "learning_objectives.html#ensemble-models",
+    "href": "learning_objectives.html#ensemble-models",
+    "title": "Independent learning outcomes",
+    "section": "Ensemble models",
+    "text": "Ensemble models\n\nunderstanding of predictive ensembles and their properties\nability to create a predictive ensemble of forecasts in R\nunderstanding the concept of weighted forecast ensembles"
+  },
+  {
+    "objectID": "sessions/end-of-course-summary-and-discussion.html",
+    "href": "sessions/end-of-course-summary-and-discussion.html",
+    "title": "End of course summary and discussion",
+    "section": "",
+    "text": "We hope that you’ve enjoyed taking this course on understanding and evaluating forecasts of infectious disease burden. We will be very happy to have your feedback, comments or any questions on the course discussion page.\n\n\nEnd of course summary",
+    "crumbs": [
+      "End of course summary and discussion"
+    ]
+  },
+  {
+    "objectID": "sessions/end-of-course-summary-and-discussion.html#slides",
+    "href": "sessions/end-of-course-summary-and-discussion.html#slides",
+    "title": "End of course summary and discussion",
+    "section": "",
+    "text": "End of course summary",
+    "crumbs": [
+      "End of course summary and discussion"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation-of-multiple-models.html",
+    "href": "sessions/forecast-evaluation-of-multiple-models.html",
+    "title": "Evaluating forecasts from multiple models",
+    "section": "",
+    "text": "We can classify models along a spectrum by how much they include an understanding of underlying processes, or mechanisms; or whether they emphasise drawing from the data using a statistical approach. These different approaches all have different strength and weaknesses, and it is not clear a prior which one produces the best forecast in any given situation.\nIn this session, we’ll start with forecasts from models of different levels of mechanism vs. statistical complexity and evaluate them using visualisation and proper scoring rules as we did in the last session for the random walk model\n\n\n\nIntroduction to the spectrum of forecasting models\n\n\n\n\nThe aim of this session is to introduce the concept of a spectrum of forecasting models and to demonstrate how to evaluate a range of different models from across this spectrum.\n\n\n\n\n\n\nNoteSetup\n\n\n\n\n\n\n\nThe source file of this session is located at sessions/forecast-ensembles.qmd.\n\n\n\nIn this session we will use the nfidd package to load a data set of infection times and access stan models and helper functions, the dplyr and tidyr packages for data wrangling, ggplot2 library for plotting, the tidybayes package for extracting results of the inference and the scoringutils package for evaluating forecasts.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"tidyr\")\nlibrary(\"ggplot2\")\nlibrary(\"scoringutils\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.\n\n\n\n\n\nWe set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)",
+    "crumbs": [
+      "Evaluating forecasts from multiple models"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation-of-multiple-models.html#slides",
+    "href": "sessions/forecast-evaluation-of-multiple-models.html#slides",
+    "title": "Evaluating forecasts from multiple models",
+    "section": "",
+    "text": "Introduction to the spectrum of forecasting models",
+    "crumbs": [
+      "Evaluating forecasts from multiple models"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation-of-multiple-models.html#objectives",
+    "href": "sessions/forecast-evaluation-of-multiple-models.html#objectives",
+    "title": "Evaluating forecasts from multiple models",
+    "section": "",
+    "text": "The aim of this session is to introduce the concept of a spectrum of forecasting models and to demonstrate how to evaluate a range of different models from across this spectrum.\n\n\n\n\n\n\nNoteSetup\n\n\n\n\n\n\n\nThe source file of this session is located at sessions/forecast-ensembles.qmd.\n\n\n\nIn this session we will use the nfidd package to load a data set of infection times and access stan models and helper functions, the dplyr and tidyr packages for data wrangling, ggplot2 library for plotting, the tidybayes package for extracting results of the inference and the scoringutils package for evaluating forecasts.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"tidyr\")\nlibrary(\"ggplot2\")\nlibrary(\"scoringutils\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.\n\n\n\n\n\nWe set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)",
+    "crumbs": [
+      "Evaluating forecasts from multiple models"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation-of-multiple-models.html#source-file",
+    "href": "sessions/forecast-evaluation-of-multiple-models.html#source-file",
+    "title": "Evaluating forecasts from multiple models",
+    "section": "",
+    "text": "The source file of this session is located at sessions/forecast-ensembles.qmd.",
+    "crumbs": [
+      "Evaluating forecasts from multiple models"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation-of-multiple-models.html#libraries-used",
+    "href": "sessions/forecast-evaluation-of-multiple-models.html#libraries-used",
+    "title": "Evaluating forecasts from multiple models",
+    "section": "",
+    "text": "In this session we will use the nfidd package to load a data set of infection times and access stan models and helper functions, the dplyr and tidyr packages for data wrangling, ggplot2 library for plotting, the tidybayes package for extracting results of the inference and the scoringutils package for evaluating forecasts.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"tidyr\")\nlibrary(\"ggplot2\")\nlibrary(\"scoringutils\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.",
+    "crumbs": [
+      "Evaluating forecasts from multiple models"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation-of-multiple-models.html#initialisation",
+    "href": "sessions/forecast-evaluation-of-multiple-models.html#initialisation",
+    "title": "Evaluating forecasts from multiple models",
+    "section": "",
+    "text": "We set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)",
+    "crumbs": [
+      "Evaluating forecasts from multiple models"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation-of-multiple-models.html#scoring-your-forecast",
+    "href": "sessions/forecast-evaluation-of-multiple-models.html#scoring-your-forecast",
+    "title": "Evaluating forecasts from multiple models",
+    "section": "Scoring your forecast",
+    "text": "Scoring your forecast\nAgain as in the forecasting evaluation sessions, we will score the forecasts using the scoringutils package by first converting the forecasts to the scoringutils format.\n\nsc_forecasts &lt;- forecasts |&gt;\n  left_join(onset_df, by = \"day\") |&gt;\n  filter(!is.na(.value)) |&gt;\n  as_forecast_sample(\n    forecast_unit = c(\n      \"origin_day\", \"horizon\", \"model\"\n    ),\n    observed = \"onsets\",\n    predicted = \".value\",\n    sample_id = \".draw\"\n  )\nsc_forecasts\n\nForecast type: sample\n\n\nForecast unit:\n\n\norigin_day, horizon, and model\n\n\n\n        sample_id predicted observed origin_day horizon            model\n            &lt;int&gt;     &lt;num&gt;    &lt;int&gt;      &lt;num&gt;   &lt;int&gt;           &lt;char&gt;\n     1:         1         9        2         22       1      Random walk\n     2:         2         5        2         22       1      Random walk\n     3:         3         5        2         22       1      Random walk\n     4:         4         3        2         22       1      Random walk\n     5:         5         5        2         22       1      Random walk\n    ---                                                                 \n671996:       996         4        1        127      14 More mechanistic\n671997:       997         2        1        127      14 More mechanistic\n671998:       998         1        1        127      14 More mechanistic\n671999:       999         2        1        127      14 More mechanistic\n672000:      1000         1        1        127      14 More mechanistic\n\n\nEverything seems to be in order. We can now calculate some metrics as we did in the forecasting concepts session.\n\nsc_scores &lt;- sc_forecasts |&gt;\n  score()\n\nsc_scores\n\n     origin_day horizon            model   bias      dss     crps\n          &lt;num&gt;   &lt;int&gt;           &lt;char&gt;  &lt;num&gt;    &lt;num&gt;    &lt;num&gt;\n  1:         22       1      Random walk  0.477 2.079376 0.800163\n  2:         22       2      Random walk  0.830 3.472585 1.910219\n  3:         22       3      Random walk  0.661 3.030773 1.396429\n  4:         22       4      Random walk  0.861 4.123372 2.597126\n  5:         22       5      Random walk -0.274 2.684389 0.960931\n ---                                                             \n668:        127      10 More mechanistic  0.146 1.518516 0.474723\n669:        127      11 More mechanistic  0.657 2.406590 1.087985\n670:        127      12 More mechanistic  0.855 3.186622 1.616483\n671:        127      13 More mechanistic  0.811 2.880006 1.431316\n672:        127      14 More mechanistic  0.743 2.467303 1.168765\n     overprediction underprediction dispersion log_score    mad ae_median\n              &lt;num&gt;           &lt;num&gt;      &lt;num&gt;     &lt;num&gt;  &lt;num&gt;     &lt;num&gt;\n  1:          0.302           0.000   0.498163  1.767425 1.4826         1\n  2:          1.340           0.000   0.570219  2.493078 2.9652         3\n  3:          0.740           0.000   0.656429  2.088440 2.9652         2\n  4:          1.854           0.000   0.743126  2.689920 2.9652         4\n  5:          0.000           0.162   0.798931  2.254400 2.9652         1\n ---                                                                     \n668:          0.000           0.000   0.474723  1.588648 1.4826         0\n669:          0.618           0.000   0.469985  1.800126 1.4826         2\n670:          1.166           0.000   0.450483  2.351446 1.4826         2\n671:          1.008           0.000   0.423316  2.156431 1.4826         2\n672:          0.774           0.000   0.394765  1.852362 1.4826         2\n       se_mean\n         &lt;num&gt;\n  1:  2.461761\n  2: 10.067929\n  3:  7.502121\n  4: 18.818244\n  5:  0.534361\n ---          \n668:  0.294849\n669:  4.076361\n670:  6.661561\n671:  5.513104\n672:  4.157521\n\n\n\nAt a glance\nLet’s summarise the scores by model first.\n\nsc_scores |&gt;\n  summarise_scores(by = \"model\")\n\n              model         bias      dss      crps overprediction\n             &lt;char&gt;        &lt;num&gt;    &lt;num&gt;     &lt;num&gt;          &lt;num&gt;\n1:      Random walk  0.195607143 6.335861 13.660851       8.189982\n2: More statistical -0.001785714 6.654299 12.373960       6.215795\n3: More mechanistic  0.246191964 5.651807  6.539226       2.134616\n   underprediction dispersion log_score       mad ae_median   se_mean\n             &lt;num&gt;      &lt;num&gt;     &lt;num&gt;     &lt;num&gt;     &lt;num&gt;     &lt;num&gt;\n1:       0.8265357   4.644333  3.996289 19.296966 18.500000 1591.8156\n2:       1.8128304   4.345335  4.030148 17.715084 16.700893 1205.3669\n3:       2.4096964   1.994914  3.730556  8.518331  9.196429  186.5404\n\n\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nBefore we look in detail at the scores, what do you think the scores are telling you? Which model do you think is best?\n\n\n\n\nContinuous ranked probability score\nAs in the forecasting evaluation session, we will start by looking at the CRPS by horizon and forecast date.\n\n\n\n\n\n\nTipReminder: Key things to note about the CRPS\n\n\n\n\nSmall values are better\nWhen scoring absolute values (e.g. number of cases) it can be difficult to compare forecasts across scales (i.e., when case numbers are different, for example between locations or at different times).\n\n\n\nFirst by forecast horizon.\n\nsc_scores |&gt;\n  summarise_scores(by = c(\"model\", \"horizon\")) |&gt;\n  ggplot(aes(x = horizon, y = crps, col = model)) +\n  geom_point()\n\n\n\n\n\n\n\n\nand across different forecast dates\n\nsc_scores |&gt;\n  summarise_scores(by = c(\"origin_day\", \"model\")) |&gt;\n  ggplot(aes(x = origin_day, y = crps, col = model)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 5 minutes\n\n\n\nHow do the CRPS values change based on forecast date? How do the CRPS values change with forecast horizon?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\nHow do the CRPS values change based on forecast horizon?\n\nAll models have increasing CRPS with forecast horizon.\nThe more mechanistic model has the lowest CRPS at all forecast horizon.\nThe more stastical model starts to outperform the random walk model at longer time horizons.\n\nHow do the CRPS values change with forecast date?\n\nThe more statistical model does particularly poorly around the peak of the outbreak but outperforms the random walk model.\nThe more mechanistic model does particularly well around the peak of the outbreak versus all other models\nThe more statistical model starts to outperform the other models towards the end of the outbreak.\n\n\n\n\n\n\nPIT histograms\n\n\n\n\n\n\nTipReminder: Interpreting the PIT histogram\n\n\n\n\nIdeally PIT histograms should be uniform.\nIf is a U shape then the model is overconfident and if it is an inverted U shape then the model is underconfident.\nIf it is skewed then the model is biased towards the direction of the skew.\n\n\n\nLet’s first look at the overall PIT histogram.\n\nsc_forecasts |&gt;\n  get_pit_histogram(by = \"model\") |&gt;\n  ggplot(aes(x = mid, y = density)) +\n  geom_col() +\n  facet_wrap(~model)\n\n\n\n\n\n\n\n\nAs before let’s look at the PIT histogram by forecast horizon (to save space we will group horizons)\n\nsc_forecasts |&gt;\n  mutate(group_horizon = case_when(\n    horizon &lt;= 3 ~ \"1-3\",\n    horizon &lt;= 7 ~ \"4-7\",\n    horizon &lt;= 14 ~ \"8-14\"\n  )) |&gt;\n  get_pit_histogram(by = c(\"model\", \"group_horizon\")) |&gt;\n  ggplot(aes(x = mid, y = density)) +\n  geom_col() +\n  facet_grid(vars(model), vars(group_horizon))\n\n\n\n\n\n\n\n\nand then for different forecast dates.\n\nsc_forecasts |&gt;\n  get_pit_histogram(by = c(\"model\", \"origin_day\")) |&gt;\n  ggplot(aes(x = mid, y = density)) +\n  geom_col() +\n  facet_grid(vars(model), vars(origin_day))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 5 minutes\n\n\n\nWhat do you think of the PIT histograms?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\nWhat do you think of the PIT histograms?\n\nThe more mechanistic model is reasonably well calibrated but has a slight tendency to be overconfident.\nThe random walk is biased towards overpredicting.\nThe more statistical model is underconfident.\nAcross horizons the more mechanistic model is only liable to underpredict at the longest horizons.\nThe random walk model is initially relatively unbiased and well calibrated but becomes increasingly likely to overpredict as the horizon increases.\nThe forecast date stratified PIT histograms are hard to interpret. We may need to find other ways to visualise bias and calibration at this level of stratification (see the {scoringutils} documentation for some ideas).",
+    "crumbs": [
+      "Evaluating forecasts from multiple models"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-evaluation-of-multiple-models.html#scoring-on-the-log-scale",
+    "href": "sessions/forecast-evaluation-of-multiple-models.html#scoring-on-the-log-scale",
+    "title": "Evaluating forecasts from multiple models",
+    "section": "Scoring on the log scale",
+    "text": "Scoring on the log scale\nAgain as in the forecast evaluation session, we will also score the forecasts on the log scale.\n\nlog_sc_forecasts &lt;- sc_forecasts |&gt;\n  transform_forecasts(\n    fun = log_shift,\n    offset = 1,\n    append = FALSE\n  )\n\nlog_sc_scores &lt;- log_sc_forecasts |&gt;\n  score()\n\n\n\n\n\n\n\nTip\n\n\n\nReminder: For more on scoring on the log scale see the paper by @bosse2023scorin.\n\n\n\nAt a glance\n\nlog_sc_scores |&gt;\n  summarise_scores(by = \"model\")\n\n              model        bias        dss      crps overprediction\n             &lt;char&gt;       &lt;num&gt;      &lt;num&gt;     &lt;num&gt;          &lt;num&gt;\n1:      Random walk  0.15520536 -0.5123821 0.2341992     0.11342979\n2: More statistical -0.03850893 -0.4371274 0.2546741     0.07976281\n3: More mechanistic  0.20457143 -0.9616759 0.1950167     0.12178649\n   underprediction dispersion log_score       mad ae_median   se_mean\n             &lt;num&gt;      &lt;num&gt;     &lt;num&gt;     &lt;num&gt;     &lt;num&gt;     &lt;num&gt;\n1:      0.02945296 0.09131641 0.6207720 0.3940836 0.3135626 0.1835529\n2:      0.07088865 0.10402266 0.6544208 0.4324431 0.3489807 0.2240632\n3:      0.02181756 0.05141266 0.5585934 0.2202521 0.2744794 0.1360855\n\n\n\n\n\n\n\n\nTipTake 2 minutes\n\n\n\nBefore we look in detail at the scores, what do you think the scores are telling you? Which model do you think is best?\n\n\n\n\nCRPS\n\nlog_sc_scores |&gt;\n  summarise_scores(by = c(\"model\", \"horizon\")) |&gt;\n  ggplot(aes(x = horizon, y = crps, col = model)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\nlog_sc_scores |&gt;\n  summarise_scores(by = c(\"origin_day\", \"model\")) |&gt;\n  ggplot(aes(x = origin_day, y = crps, col = model)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 5 minutes\n\n\n\nHow do the CRPS scores on the log scale compare to the scores on the original scale?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\n\nThe performance of the mechanistic model is more variable across forecast horizon than on the natural scale.\nOn the log scale the by horizon performance of the random walk and more statistical mdoel is more comparable than on the log scale.\nThe period of high incidence dominates the target day stratified scores less on the log scale. We see that all models performed less well early and late on.\n\n\n\n\n\n\nPIT histograms\n\nlog_sc_forecasts |&gt;\n  get_pit_histogram(by = \"model\") |&gt;\n  ggplot(aes(x = mid, y = density)) +\n  geom_col() +\n  facet_wrap(~model)\n\n\n\n\n\n\n\n\n\nlog_sc_forecasts |&gt;\n  mutate(group_horizon = case_when(\n    horizon &lt;= 3 ~ \"1-3\",\n    horizon &lt;= 7 ~ \"4-7\",\n    horizon &lt;= 14 ~ \"8-14\"\n  )) |&gt;\n  get_pit_histogram(by = c(\"model\", \"group_horizon\")) |&gt;\n  ggplot(aes(x = mid, y = density)) +\n  geom_col() +\n  facet_grid(vars(model), vars(group_horizon))\n\n\n\n\n\n\n\n\n\nlog_sc_forecasts |&gt;\n  get_pit_histogram(by = c(\"model\", \"origin_day\")) |&gt;\n  ggplot(aes(x = mid, y = density)) +\n  geom_col() +\n  facet_grid(vars(model), vars(origin_day))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 5 minutes\n\n\n\nWhat do you think of the PIT histograms?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\nThe PIT histograms are similar to the original scale PIT histograms but the mechanistic model appears better calibrated.",
+    "crumbs": [
+      "Evaluating forecasts from multiple models"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-visualisation.html",
+    "href": "sessions/forecast-visualisation.html",
+    "title": "Visualising infectious disease forecasts",
+    "section": "",
+    "text": "Epidemiological forecasts are probabilistic statements about what might happen to population disease burden in the future. In this session we will make some simple forecasts using a commonly used infectious disease model, based on the renewal equation. We will see how we can visualise such forecasts, and visually compare them to what really happened.\n\n\n\nForecasting as an epidemiological problem\n\n\n\n\nThe aim of this session is to introduce the concept of forecasting and forecast visualisation using a simple model.\n\n\n\n\n\n\nNoteSetup\n\n\n\n\n\n\n\nThe source file of this session is located at sessions/forecasting-visualisation.qmd.\n\n\n\nIn this session we will use the nfidd package to load a data set of infection times and corresponding forecasts, the dplyr package for data wrangling, and the ggplot2 library for plotting.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"ggplot2\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.\n\n\n\n\n\nWe set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)\nWe will now look at some data from an infectious disease outbreak and forecasts from a renewal equation model. First, we simulate some data using functions from the nfidd package.\ngen_time_pmf &lt;- make_gen_time_pmf()\nip_pmf &lt;- make_ip_pmf()\nonset_df &lt;- simulate_onsets(\n  make_daily_infections(infection_times), gen_time_pmf, ip_pmf\n)\ntail(onset_df)\n\n# A tibble: 6 × 3\n    day onsets infections\n  &lt;dbl&gt;  &lt;int&gt;      &lt;int&gt;\n1   137      1          5\n2   138      3          1\n3   139      5          4\n4   140      3          1\n5   141      2          1\n6   142      2          0\nThis uses a data set of infection times that is included in the R package, and a function to turn these into daily number of observed symptom onsets. Do not worry too much about the details of this. The important thing is that we now have a data set onset_df of symptom onset.",
+    "crumbs": [
+      "Visualising infectious disease forecasts"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-visualisation.html#slides",
+    "href": "sessions/forecast-visualisation.html#slides",
+    "title": "Visualising infectious disease forecasts",
+    "section": "",
+    "text": "Forecasting as an epidemiological problem",
+    "crumbs": [
+      "Visualising infectious disease forecasts"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-visualisation.html#objectives",
+    "href": "sessions/forecast-visualisation.html#objectives",
+    "title": "Visualising infectious disease forecasts",
+    "section": "",
+    "text": "The aim of this session is to introduce the concept of forecasting and forecast visualisation using a simple model.\n\n\n\n\n\n\nNoteSetup\n\n\n\n\n\n\n\nThe source file of this session is located at sessions/forecasting-visualisation.qmd.\n\n\n\nIn this session we will use the nfidd package to load a data set of infection times and corresponding forecasts, the dplyr package for data wrangling, and the ggplot2 library for plotting.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"ggplot2\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.\n\n\n\n\n\nWe set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)",
+    "crumbs": [
+      "Visualising infectious disease forecasts"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-visualisation.html#source-file",
+    "href": "sessions/forecast-visualisation.html#source-file",
+    "title": "Visualising infectious disease forecasts",
+    "section": "",
+    "text": "The source file of this session is located at sessions/forecasting-visualisation.qmd.",
+    "crumbs": [
+      "Visualising infectious disease forecasts"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-visualisation.html#libraries-used",
+    "href": "sessions/forecast-visualisation.html#libraries-used",
+    "title": "Visualising infectious disease forecasts",
+    "section": "",
+    "text": "In this session we will use the nfidd package to load a data set of infection times and corresponding forecasts, the dplyr package for data wrangling, and the ggplot2 library for plotting.\n\nlibrary(\"nfidd\")\nlibrary(\"dplyr\")\nlibrary(\"ggplot2\")\n\n\n\n\n\n\n\nTip\n\n\n\nThe best way to interact with the material is via the Visual Editor of RStudio.",
+    "crumbs": [
+      "Visualising infectious disease forecasts"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-visualisation.html#initialisation",
+    "href": "sessions/forecast-visualisation.html#initialisation",
+    "title": "Visualising infectious disease forecasts",
+    "section": "",
+    "text": "We set a random seed for reproducibility. Setting this ensures that you should get exactly the same results on your computer as we do.\n\nset.seed(123)",
+    "crumbs": [
+      "Visualising infectious disease forecasts"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-visualisation.html#simulating-a-geometric-random-walk",
+    "href": "sessions/forecast-visualisation.html#simulating-a-geometric-random-walk",
+    "title": "Visualising infectious disease forecasts",
+    "section": "Simulating a geometric random walk",
+    "text": "Simulating a geometric random walk\nYou can have a look at an R function for performing the geometric random walk:\n\ngeometric_random_walk\n\nfunction (init, noise, std) \n{\n    n &lt;- length(noise) + 1\n    x &lt;- numeric(n)\n    x[1] &lt;- log(init)\n    for (i in 2:n) {\n        x[i] &lt;- x[i - 1] + noise[i - 1] * std\n    }\n    exp(x)\n}\n&lt;bytecode: 0x562d513eead0&gt;\n&lt;environment: namespace:nfidd&gt;\n\n\nWe can use this function to simulate a random walk:\n\nR &lt;- geometric_random_walk(init = 1, noise = rnorm(100), std = 0.1)\ndata &lt;- tibble(t = seq_along(R), R = exp(R))\n\nggplot(data, aes(x = t, y = R)) +\n  geom_line() +\n  labs(title = \"Simulated data from a random walk model\",\n       x = \"Time\",\n       y = \"R\")\n\n\n\n\n\n\n\n\nYou can repeat this multiple times either with the same parameters or changing some to get a feeling for what this does.",
+    "crumbs": [
+      "Visualising infectious disease forecasts"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-visualisation.html#visualising-the-forecast",
+    "href": "sessions/forecast-visualisation.html#visualising-the-forecast",
+    "title": "Visualising infectious disease forecasts",
+    "section": "Visualising the forecast",
+    "text": "Visualising the forecast\nWe can now visualise a forecast made from the renewal equation model we used for forecasting. Once again, this forecast is provided in the nfidd package which we loaded earlier. We will first extract the forecast and then plot the forecasted number of symptom onsets alongside the observed number of symptom onsets before the forecast was made.\n\ndata(rw_forecasts)\nhorizon &lt;- 14\nforecast_day &lt;- 71\nforecast &lt;- rw_forecasts |&gt;\n  ungroup() |&gt;\n  filter(origin_day == forecast_day)\n\nprevious_onsets &lt;- onset_df |&gt;\n  filter(day &lt;= forecast_day)\n\n\n\n\n\n\n\nTipHow did we generate these forecasts?\n\n\n\n\n\nSome important things to note about these forecasts:\n\nWe used a 14 day forecast horizon.\nEach forecast used all the data up to the forecast date.\nWe generated 1000 predictive posterior samples for each forecast.\nWe started forecasting 3 weeks into the outbreak and then forecast every 7 days until the end of the data (excluding the last 14 days to allow a full forecast).\nWe use the same simulated outbreak data as before:\n\n\ngen_time_pmf &lt;- make_gen_time_pmf()\nip_pmf &lt;- make_ip_pmf()\nonset_df &lt;- simulate_onsets(\n  make_daily_infections(infection_times), gen_time_pmf, ip_pmf\n)\nhead(onset_df)\n\n# A tibble: 6 × 3\n    day onsets infections\n  &lt;dbl&gt;  &lt;int&gt;      &lt;int&gt;\n1     1      0          0\n2     2      0          1\n3     3      0          0\n4     4      0          2\n5     5      0          1\n6     6      1          1\n\n\n\n\n\n\nforecast |&gt;\n  filter(.draw %in% sample(.draw, 100)) |&gt;\n  ggplot(aes(x = day)) +\n  geom_line(alpha = 0.1, aes(y = .value, group = .draw)) +\n  geom_point(data = previous_onsets, aes(x = day, y = onsets), color = \"black\") +\n  labs(\n    title = \"Symptom onsets\",\n    subtitle = \"Forecast (trajectories) and observed (points)\"\n  )\n\n\n\n\n\n\n\n\nIn this plot, the dots show the data and the lines are forecast trajectories that the model deems plausible and consistent with the data so far.\n\n\n\n\n\n\nTipTake 5 minutes\n\n\n\nWhat do you think of this forecast? Does it match your intuition of how this outbreak will continue? Is there another way you could visualise the forecast that might be more informative?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\n\nThe forecast mainly predicts things to continue growing as they have been. However, some of the trajectories are going down, indicating that with some probabilities the outbreak might end.\nBased purely on the data and without knowing anything else about the disease and setting, it is hard to come up with an alternative. The model seems sensible given the available data. In particular, uncertainty increases with increasing distance to the data, which is a sign of a good forecasting model.\nInstead of visualising plausible trajectories we could visualise a cone with a central forecast and uncertainty around it. We will look at this in the next session as an alternative.\n\n\n\n\nIf we want to know how well a model is doing at forecasting, we can later compare it do the data of what really happened. If we do this, we get the following plot.\n\nfuture_onsets &lt;- onset_df |&gt;\n  filter(day &lt;= forecast_day + horizon)\n\nforecast |&gt;\n  filter(.draw %in% sample(.draw, 100)) |&gt;\n  ggplot(aes(x = day)) +\n  geom_line(alpha = 0.1, aes(y = .value, group = .draw)) +\n  geom_point(data = future_onsets, aes(x = day, y = onsets), color = \"black\") +\n  labs(\n    title = \"Symptom onsets\",\n    subtitle = \"Forecast (trajectories) and observed (points)\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 5 minutes\n\n\n\nWhat do you think now of this forecast? Did the model do a good job? Again, is there another way you could visualise the forecast that might be more informative?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\n\nOn the face of it the forecast looks very poor with some very high predictions compared to the data.\nBased on this visualisation it is hard to tell if the model is doing a good job but it seems like it is not.\nAs outbreaks are generally considered to be exponential processes it might be more informative to plot the forecast on the log scale.\n\n\nforecast |&gt;\n  filter(.draw %in% sample(.draw, 100)) |&gt;\n  ggplot(aes(x = day)) +\n  geom_line(alpha = 0.1, aes(y = .value, group = .draw)) +\n  geom_point(data = future_onsets, aes(x = day, y = onsets), color = \"black\") +\n  scale_y_log10() +\n  labs(title = \"Symptom onsets, log scale\", subtitle = \"Forecast and observed\")\n\nWarning in scale_y_log10(): log-10 transformation introduced infinite values.\n\n\n\n\n\n\n\n\n\nThis should be a lot more informative. We see that for longer forecast horizons the model is not doing a great job of capturing the reduction in symptom onsets. However, we can now see that the model seems to be producing very reasonable forecasts for the first week or so of the forecast. This is a common pattern in forecasting where a model is good at capturing the short term dynamics but struggles with the longer term dynamics.\n\n\n\nWe managed to learn quite a lot about our model’s forecasting limitations just looking at a single forecast using visualisations. However, what if we wanted to quantify how well the model is doing? In order to do that we need to look at multiple forecasts from the model.",
+    "crumbs": [
+      "Visualising infectious disease forecasts"
+    ]
+  },
+  {
+    "objectID": "sessions/forecast-visualisation.html#visualising-multiple-forecasts-from-a-single-model",
+    "href": "sessions/forecast-visualisation.html#visualising-multiple-forecasts-from-a-single-model",
+    "title": "Visualising infectious disease forecasts",
+    "section": "Visualising multiple forecasts from a single model",
+    "text": "Visualising multiple forecasts from a single model\nAs for a single forecast, our first step is to visualise the forecasts as this can give us a good idea of how well the model is doing without having to calculate any metrics.\n\nrw_forecasts |&gt;\n  filter(.draw %in% sample(.draw, 100)) |&gt;\n  ggplot(aes(x = day)) +\n  geom_line(\n    aes(y = .value, group = interaction(.draw, origin_day), col = origin_day),\n    alpha = 0.1\n  ) +\n  geom_point(\n    data = onset_df |&gt;\n      filter(day &gt;= 21),\n    aes(x = day, y = onsets), color = \"black\") +\n  scale_color_binned(type = \"viridis\") +\n  labs(title = \"Weekly forecasts of symptom onsets over an outbreak\",\n       col = \"Forecast start day\")\n\n\n\n\n\n\n\n\nAs for the single forecast it may be helpful to also plot the forecast on the log scale.\n\nrw_forecasts |&gt;\n  filter(.draw %in% sample(.draw, 100)) |&gt; \n  ggplot(aes(x = day)) +\n  geom_line(\n    aes(y = .value, group = interaction(.draw, origin_day), col = origin_day),\n    alpha = 0.1\n  ) +\n  geom_point(data = onset_df, aes(x = day, y = onsets), color = \"black\") +\n  scale_y_log10() +\n  scale_color_binned(type = \"viridis\") +\n  labs(title = \"Weekly symptom onset forecasts: log scale\",\n       col = \"Forecast start day\")\n\nWarning in scale_y_log10(): log-10 transformation introduced infinite values.\nlog-10 transformation introduced infinite values.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipTake 5 minutes\n\n\n\nWhat do you think of these forecasts? Are they any good? How well do they capture changes in trend? Does the uncertainty seem reasonable? Do they seem to under or over predict consistently? Would you visualise the forecast in a different way?\n\n\n\n\n\n\n\n\nNoteSolution\n\n\n\n\n\nWhat do you think of these forecasts?\n\nWe think these forecasts are a reasonable place to start but there is definitely room for improvement.\n\nAre they any good?\n\nThey seem to do a reasonable job of capturing the short term dynamics but struggle with the longer term dynamics.\n\nHow well do they capture changes in trend?\n\nThere is little evidence of the model capturing the reduction in onsets before it begins to show in the data.\n\nDoes the uncertainty seem reasonable?\n\nOn the natural scale it looks like the model often over predicts. Things seem more balanced on the log scale but the model still seems to be overly uncertain.\n\nDo they seem to under or over predict consistently?\n\nIt looks like the model is consistently over predicting on the natural scale but this is less clear on the log scale.",
+    "crumbs": [
+      "Visualising infectious disease forecasts"
+    ]
+  },
+  {
+    "objectID": "sessions/slides/closing.html#session-1-forecasting",
+    "href": "sessions/slides/closing.html#session-1-forecasting",
+    "title": "End of course summary",
+    "section": "Session 1: Forecasting",
+    "text": "Session 1: Forecasting\n\nforecasting is the task of making unconditional statements about the future\nmeaningful forecasts are probabilistic\nwe can use visualisation understand the predictive performance of a model"
+  },
+  {
+    "objectID": "sessions/slides/closing.html#session-2-forecast-evaluation",
+    "href": "sessions/slides/closing.html#session-2-forecast-evaluation",
+    "title": "End of course summary",
+    "section": "Session 2: Forecast evaluation",
+    "text": "Session 2: Forecast evaluation\n\nwe can assess forecasts using proper scoring rules\nwe can use scoring to quantify the predictive performance of different models"
+  },
+  {
+    "objectID": "sessions/slides/closing.html#session-3-forecast-ensembles",
+    "href": "sessions/slides/closing.html#session-3-forecast-ensembles",
+    "title": "End of course summary",
+    "section": "Session 3: Forecast ensembles",
+    "text": "Session 3: Forecast ensembles\n\nensembles can combine forecasts from multiple models\nsimple ensembles often outperform indivdiual models\nweighted ensembles can learn from past performance aiming to make better forecasts"
+  },
+  {
+    "objectID": "sessions/slides/forecasting-as-an-epidemiological-problem.html#your-turn",
+    "href": "sessions/slides/forecasting-as-an-epidemiological-problem.html#your-turn",
+    "title": "Forecasting as an epidemiological problem",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nLoad some forecasts we have generated and visualise them alongside the data.\nExplore different ways of visualising forecasts to assess how good the model performs at forecasting."
+  }
+]
